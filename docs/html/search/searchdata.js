@@ -1,27 +1,30 @@
 var indexSectionsWithContent =
 {
-  0: "_bdflpw",
-  1: "dflp",
-  2: "_d",
-  3: "b",
-  4: "w"
+  0: "_bcdfglpsw",
+  1: "c",
+  2: "cdflp",
+  3: "_cdgs",
+  4: "b",
+  5: "w"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "files",
-  2: "functions",
-  3: "variables",
-  4: "defines"
+  1: "classes",
+  2: "files",
+  3: "functions",
+  4: "variables",
+  5: "defines"
 };
 
 var indexSectionLabels =
 {
   0: "All",
-  1: "Files",
-  2: "Functions",
-  3: "Variables",
-  4: "Macros"
+  1: "Classes",
+  2: "Files",
+  3: "Functions",
+  4: "Variables",
+  5: "Macros"
 };
 
