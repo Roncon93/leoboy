@@ -2,8 +2,33 @@
 #include <cstdint>
 
 /// <summary>
-/// Represents the CPU registers and flags of the Game Boy's Sharp LR35902 processor.
+/// Emulates the Game Boy CPU registers and basic operations.
 /// </summary>
+/// <remarks>
+/// The Game Boy CPU (a modified Z80-like 8-bit processor) has eight 8-bit registers:
+/// A, F, B, C, D, E, H, and L. Some instructions use these registers combined into
+/// 16-bit pairs for addressing or arithmetic:
+/// - AF: Accumulator (A) and Flags (F)
+/// - BC: B and C
+/// - DE: D and E
+/// - HL: H and L
+///
+/// Combined registers are represented as 16-bit values, formed by placing the high
+/// byte in the upper 8 bits and the low byte in the lower 8 bits.
+///
+/// Example:
+/// - BC combined register: B is the high byte, C is the low byte.
+/// - GetBC() returns (B << 8) | C.
+/// - SetBC(value) splits the 16-bit value into high and low bytes:
+///   B = value >> 8; C = value & 0xFF.
+///
+/// The F register is special: it stores CPU flags in its upper nibble,
+/// and the lower nibble is always zero. Thus, when setting F,
+/// the lower 4 bits are masked out to ensure correctness.
+///
+/// These operations mimic the behavior of the Game Boy hardware registers
+/// and are fundamental to accurate CPU emulation.
+/// </remarks>
 class Cpu
 {
 public:
