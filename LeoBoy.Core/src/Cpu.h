@@ -1,5 +1,6 @@
 #pragma once
 #include <cstdint>
+#include "Memory.h"
 
 /// <summary>
 /// Emulates the Game Boy CPU registers and basic operations.
@@ -32,10 +33,36 @@
 class Cpu
 {
 public:
+	/// <summary>
+	/// Program Counter initialized to 0x0100, where the BIOS ends
+	/// </summary>
+	static constexpr uint16_t InitialPc = 0x0100;
+
+    /// <summary>
+    /// Stack Pointer initialized to 0xFFFE, pointing to the top of the memory
+	/// </summary>
+	static constexpr uint16_t InitialSp = 0xFFFE;
+
     /// <summary>
     /// Initializes all registers to zero.
     /// </summary>
-    Cpu();
+    Cpu(Memory& memory);
+
+    /// <summary>
+    /// Fetches the next opcode from memory and increments PC.
+    /// </summary>
+    uint8_t Fetch();
+
+    /// <summary>
+    /// Decodes and executes a single CPU instruction.
+    /// </summary>
+    /// <param name="opcode">The opcode byte fetched from memory.</param>
+    void Execute(uint8_t opcode);
+
+    /// <summary>
+    /// Runs one CPU instruction cycle: fetch, decode, and execute.
+    /// </summary>
+    void Step();
 
     /// <summary>
     /// Gets the combined 16-bit AF register.
@@ -171,6 +198,9 @@ public:
     void SetL(uint8_t value);
 
 private:
+	Memory& memory;
+	uint16_t pc;
+	uint16_t sp;
     uint8_t a;
     uint8_t f;
     uint8_t b;
@@ -179,4 +209,20 @@ private:
     uint8_t e;
     uint8_t h;
     uint8_t l;
+
+    /// <summary>
+    /// Combines two 8-bit values into a single 16-bit register value.
+    /// </summary>
+    /// <param name="high">The high 8 bits of the register.</param>
+    /// <param name="low">The low 8 bits of the register.</param>
+    /// <returns>A 16-bit value formed by combining the high and low bytes.</returns>
+    uint16_t GetCombinedRegister(uint8_t high, uint8_t low) const;
+
+    /// <summary>
+    /// Splits a 16-bit value into high and low 8-bit register values.
+    /// </summary>
+    /// <param name="value">The 16-bit value to be split.</param>
+    /// <param name="high">Reference to the variable that will receive the high 8 bits.</param>
+    /// <param name="low">Reference to the variable that will receive the low 8 bits.</param>
+    void SetCombinedRegister(uint16_t value, uint8_t& high, uint8_t& low);
 };

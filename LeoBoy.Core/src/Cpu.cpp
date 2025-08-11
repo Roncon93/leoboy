@@ -1,52 +1,74 @@
 #include "Cpu.h"
+#include "Opcodes.h"
+#include <iostream>
 
-Cpu::Cpu()
-    : a(0), f(0), b(0), c(0), d(0), e(0), h(0), l(0)
+Cpu::Cpu(Memory& memory)
+    : memory(memory), pc(InitialPc), sp(InitialSp), a(0), f(0), b(0), c(0), d(0), e(0), h(0), l(0)
 {
+}
+
+uint8_t Cpu::Fetch()
+{
+    return memory.Read(pc++);
+}
+
+void Cpu::Execute(uint8_t opcode)
+{
+    switch (opcode)
+    {
+        case Opcodes::NOP:
+                // Do nothing
+                break;
+
+        default:
+            std::cout << "Unimplemented opcode: 0x" << std::hex << (int)opcode << "\n";
+            break;
+    }
+}
+
+void Cpu::Step()
+{
+    Execute(Fetch());
 }
 
 uint16_t Cpu::GetAF() const
 {
-    return (static_cast<uint16_t>(a) << 8) | (f & 0xF0);
+    return GetCombinedRegister(a, f);
 }
 
 void Cpu::SetAF(uint16_t value)
 {
-    a = static_cast<uint8_t>((value >> 8) & 0xFF);
-    f = static_cast<uint8_t>(value & 0xF0);
+	SetCombinedRegister(value, a, f);
 }
 
 uint16_t Cpu::GetBC() const
 {
-    return (static_cast<uint16_t>(b) << 8) | c;
+    return GetCombinedRegister(b, c);
 }
 
 void Cpu::SetBC(uint16_t value)
 {
-    b = static_cast<uint8_t>((value >> 8) & 0xFF);
-    c = static_cast<uint8_t>(value & 0xFF);
+	SetCombinedRegister(value, b, c);
 }
 
 uint16_t Cpu::GetDE() const
 {
-    return (static_cast<uint16_t>(d) << 8) | e;
+    return GetCombinedRegister(d, e);
 }
 
 void Cpu::SetDE(uint16_t value)
 {
-    d = static_cast<uint8_t>((value >> 8) & 0xFF);
-    e = static_cast<uint8_t>(value & 0xFF);
+	SetCombinedRegister(value, d, e);
 }
 
 uint16_t Cpu::GetHL() const
 {
-    return (static_cast<uint16_t>(h) << 8) | l;
+	return GetCombinedRegister(h, l);
 }
 
 void Cpu::SetHL(uint16_t value)
 {
-    h = static_cast<uint8_t>((value >> 8) & 0xFF);
-    l = static_cast<uint8_t>(value & 0xFF);
+	SetCombinedRegister(value, h, l);
 }
 
 uint8_t Cpu::GetA() const
@@ -127,4 +149,15 @@ uint8_t Cpu::GetL() const
 void Cpu::SetL(uint8_t value)
 {
     l = value;
+}
+
+uint16_t Cpu::GetCombinedRegister(uint8_t high, uint8_t low) const
+{
+	return (static_cast<uint16_t>(high) << 8) | low;
+}
+
+void Cpu::SetCombinedRegister(uint16_t value, uint8_t& high, uint8_t& low)
+{
+    high = static_cast<uint8_t>((value >> 8) & 0xFF);
+    low = static_cast<uint8_t>(value & 0xFF);
 }

@@ -22,6 +22,11 @@ class Memory
 {
 public:
 	/// <summary>
+	/// Total size of the addressable memory space.
+	/// </summary>
+	static constexpr size_t MemorySize = 0x10000; // 64 KB
+
+	/// <summary>
 	/// Initializes the memory with all bytes set to zero.
 	/// </summary>
 	Memory();
@@ -45,5 +50,5 @@ private:
 	/// Defines a fixed-size array of 65,536 bytes
 	/// which represents the memory of the device.
 	/// </summary>
-	std::array<uint8_t, 0x10000> data;
+	std::array<uint8_t, MemorySize> data;
 };
