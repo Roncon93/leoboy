@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
 #include "Memory.h"
+#include "IMemory.h"
 
 /// <summary>
 /// Emulates the Game Boy CPU registers and basic operations.
@@ -46,7 +47,7 @@ public:
     /// <summary>
     /// Initializes all registers to zero.
     /// </summary>
-    Cpu(Memory& memory);
+    Cpu(IMemory& memory);
 
     /// <summary>
     /// Fetches the next opcode from memory and increments PC.
@@ -198,7 +199,7 @@ public:
     void SetL(uint8_t value);
 
 private:
-	Memory& memory;
+	IMemory& memory;
 	uint16_t pc;
 	uint16_t sp;
     uint8_t a;
