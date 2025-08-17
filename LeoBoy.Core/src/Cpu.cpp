@@ -1,9 +1,10 @@
 #include "Cpu.h"
 #include "Opcodes.h"
 #include <iostream>
+#include <sstream>
 
-Cpu::Cpu(IMemory& memory)
-    : memory(memory), pc(InitialPc), sp(InitialSp), a(0), f(0), b(0), c(0), d(0), e(0), h(0), l(0)
+Cpu::Cpu(IMemory& memory, ILogger& logger)
+    : memory(memory), logger(logger), pc(InitialPc), sp(InitialSp), a(0), f(0), b(0), c(0), d(0), e(0), h(0), l(0)
 {
 }
 
@@ -21,7 +22,10 @@ void Cpu::Execute(uint8_t opcode)
                 break;
 
         default:
-            std::cout << "Unimplemented opcode: 0x" << std::hex << (int)opcode << "\n";
+			std::stringstream stream;
+            stream << "Unimplemented opcode: 0x" << std::hex << (int)opcode << "\n";
+
+			logger.Log(1, stream.str());
             break;
     }
 }
@@ -39,6 +43,7 @@ uint16_t Cpu::GetAF() const
 void Cpu::SetAF(uint16_t value)
 {
 	SetCombinedRegister(value, a, f);
+    SetF(f);
 }
 
 uint16_t Cpu::GetBC() const

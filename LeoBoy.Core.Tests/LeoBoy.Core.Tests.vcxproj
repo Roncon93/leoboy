@@ -20,12 +20,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="catch_amalgamated.cpp" />
-    <ClCompile Include="CpuTests.cpp" />
-    <ClCompile Include="MemoryTests.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Tests\Cpu\CpuOperationTests.cpp" />
+    <ClCompile Include="Tests\Memory\MemoryTests.cpp" />
+    <ClCompile Include="Tests\Cpu\CpuCombinedRegisterTests.cpp" />
+    <ClCompile Include="Tests\Cpu\CpuSingleRegisterTests.cpp" />
+    <ClCompile Include="Tests\Cpu\CpuTestsFixture.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="catch_amalgamated.hpp" />
-    <ClInclude Include="doctest.h" />
+    <ClInclude Include="fakeit.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LeoBoy.Core\LeoBoy.Core.vcxproj">
@@ -33,6 +37,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include=".runsettings" />
     <None Include="cpp.hint" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -93,7 +98,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core.Tests;C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -110,7 +115,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core.Tests;C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,7 +130,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core.Tests;C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,7 +147,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core.Tests;C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

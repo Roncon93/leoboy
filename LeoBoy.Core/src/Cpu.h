@@ -2,6 +2,7 @@
 #include <cstdint>
 #include "Memory.h"
 #include "IMemory.h"
+#include "Logging/ILogger.h"
 
 /// <summary>
 /// Emulates the Game Boy CPU registers and basic operations.
@@ -47,7 +48,7 @@ public:
     /// <summary>
     /// Initializes all registers to zero.
     /// </summary>
-    Cpu(IMemory& memory);
+    Cpu(IMemory& memory, ILogger& logger);
 
     /// <summary>
     /// Fetches the next opcode from memory and increments PC.
@@ -200,6 +201,7 @@ public:
 
 private:
 	IMemory& memory;
+	ILogger& logger;
 	uint16_t pc;
 	uint16_t sp;
     uint8_t a;
