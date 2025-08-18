@@ -18,9 +18,6 @@
     <ClCompile Include="Tests\Memory\MemoryTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="catch_amalgamated.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -36,17 +33,26 @@
     <ClCompile Include="Tests\Cpu\CpuOperationTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Tests\Memory\MemoryTestsFixture.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\catch_amalgamated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="catch_amalgamated.hpp">
+    <ClInclude Include="Libraries\catch_amalgamated.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="fakeit.hpp">
+    <ClInclude Include="Libraries\fakeit.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
     <None Include=".runsettings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="LastCoverageResults.log" />
   </ItemGroup>
 </Project>

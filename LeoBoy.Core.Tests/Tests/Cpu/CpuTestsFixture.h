@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../../catch_amalgamated.hpp"
-#include "../../fakeit.hpp"
+#include "../../Libraries/catch_amalgamated.hpp"
+#include "../../Libraries/fakeit.hpp"
 #include "../../LeoBoy.Core/src/IMemory.h"
 #include "../../LeoBoy.Core/src/Cpu.h"
 
