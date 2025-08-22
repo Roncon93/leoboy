@@ -1,6 +1,6 @@
 #include "CpuTestsFixture.h"
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: All registers are initialized to 0, [cpu]")
+TEST_CASE_METHOD(CpuTests, "[CPU]: All registers are initialized to 0", "[cpu]")
 {
     // Act
     uint8_t a = cpu.GetA();
@@ -23,7 +23,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: All registers are initialized to 0, [cpu]")
     REQUIRE(l == zeroRegisterValue);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Register A can be set and read")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Register A can be set and read", "[cpu]")
 {
     // Act
     cpu.SetA(testRegisterValue);
@@ -32,7 +32,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Register A can be set and read")
     REQUIRE(cpu.GetA() == testRegisterValue);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Register B can be set and read")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Register B can be set and read", "[cpu]")
 {
     // Act
     cpu.SetB(testRegisterValue);
@@ -41,7 +41,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Register B can be set and read")
     REQUIRE(cpu.GetB() == testRegisterValue);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Register C can be set and read")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Register C can be set and read", "[cpu]")
 {
     // Act
     cpu.SetC(testRegisterValue);
@@ -50,7 +50,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Register C can be set and read")
     REQUIRE(cpu.GetC() == testRegisterValue);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Register D can be set and read")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Register D can be set and read", "[cpu]")
 {
     // Act
     cpu.SetD(testRegisterValue);
@@ -59,7 +59,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Register D can be set and read")
     REQUIRE(cpu.GetD() == testRegisterValue);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Register E can be set and read")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Register E can be set and read", "[cpu]")
 {
     // Act
     cpu.SetE(testRegisterValue);
@@ -68,7 +68,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Register E can be set and read")
     REQUIRE(cpu.GetE() == testRegisterValue);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Register F can be set and read")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Register F can be set and read", "[cpu]")
 {
     // Arrange
     uint8_t expectedValue = 0x40;
@@ -80,7 +80,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Register F can be set and read")
     REQUIRE(cpu.GetF() == expectedValue);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Register H can be set and read")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Register H can be set and read", "[cpu]")
 {
     // Act
     cpu.SetH(testRegisterValue);
@@ -89,7 +89,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Register H can be set and read")
     REQUIRE(cpu.GetH() == testRegisterValue);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Register L can be set and read")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Register L can be set and read", "[cpu]")
 {
     // Act
     cpu.SetL(testRegisterValue);

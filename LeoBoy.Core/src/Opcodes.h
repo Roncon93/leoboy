@@ -14,4 +14,10 @@ namespace Opcodes
 	/// without affecting the state of the CPU or memory.
 	/// </remarks>
 	static constexpr uint8_t NOP = 0x00;
+
+	/// <summary>
+	/// Represents the opcode for the "LD A, d8" instruction
+	/// which loads an immediate 8-bit value into the accumulator register A.
+	/// </summary>
+	static constexpr uint8_t LD_A_d8 = 0x3E;
 }

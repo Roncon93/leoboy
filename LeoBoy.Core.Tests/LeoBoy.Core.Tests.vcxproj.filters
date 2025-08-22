@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
-    <None Include=".runsettings" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="LastCoverageResults.log" />

@@ -1,6 +1,6 @@
 #include "CpuTestsFixture.h"
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Registers A and F combined read test")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Registers A and F combined read test", "[cpu]")
 {
     // Arrange
     cpu.SetA(0x12);
@@ -15,7 +15,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Registers A and F combined read test")
     REQUIRE(result == expectedValue);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Registers A and F combined write test")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Registers A and F combined write test", "[cpu]")
 {
     // Arrange
     uint16_t testValue = 0x5678;
@@ -32,7 +32,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Registers A and F combined write test")
     REQUIRE(resultF == expectedRegisterFValue);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Registers B and C combined read test")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Registers B and C combined read test", "[cpu]")
 {
     // Arrange
     cpu.SetB(0x12);
@@ -47,7 +47,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Registers B and C combined read test")
     REQUIRE(result == expectedValue);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Registers B and C combined write test")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Registers B and C combined write test", "[cpu]")
 {
     // Arrange
     uint16_t testValue = 0x5678;
@@ -64,7 +64,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Registers B and C combined write test")
     REQUIRE(resultC == expectedRegisterCValue);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Registers D and E combined write test")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Registers D and E combined write test", "[cpu]")
 {
     // Arrange
     uint16_t testValue = 0x5678;
@@ -81,7 +81,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Registers D and E combined write test")
     REQUIRE(resultE == expectedRegisterEValue);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Registers H and L combined write test")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Registers H and L combined write test", "[cpu]")
 {
     // Arrange
     uint16_t testValue = 0x5678;

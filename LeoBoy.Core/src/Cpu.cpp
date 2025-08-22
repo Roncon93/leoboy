@@ -18,8 +18,12 @@ void Cpu::Execute(uint8_t opcode)
     switch (opcode)
     {
         case Opcodes::NOP:
-                // Do nothing
-                break;
+            // Do nothing
+            break;
+
+        case Opcodes::LD_A_d8:
+            SetA(memory.Read(pc++));
+			break;
 
         default:
 			std::stringstream stream;

@@ -1,7 +1,7 @@
 #include "CpuTestsFixture.h"
 #include "../../LeoBoy.Core/src/Opcodes.h"
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Fetch reads memory and increases program counter")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Fetch reads memory and increases program counter", "[cpu]")
 {
 	// Arrange
 	uint8_t firstExpectedValue = 0x74;
@@ -22,7 +22,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Fetch reads memory and increases program coun
 	REQUIRE(secondResult == secondExpectedValue);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Execute NOP opcode does nothing")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Execute NOP opcode does nothing", "[cpu]")
 {
 	// Arrange
 	uint8_t nopOpcode = Opcodes::NOP;
@@ -44,7 +44,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Execute NOP opcode does nothing")
 	REQUIRE(cpu.GetL() == 0x00);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Execute with invalid opcode should throw error")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Execute with invalid opcode should throw error", "[cpu]")
 {
 	// Arrange
 	uint8_t invalidOpcode = 0xFF;
@@ -56,7 +56,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Execute with invalid opcode should throw erro
 	fakeit::Verify(Method(mockLogger, Log)).Exactly(fakeit::Once);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Step should fetch, decode and execute an instruction")
+TEST_CASE_METHOD(CpuTests, "[CPU]: Step should fetch, decode and execute an instruction", "[cpu]")
 {
 	// Arrange
 	uint8_t invalidOpcode = 0xFF;
@@ -69,4 +69,21 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Step should fetch, decode and execute an inst
 
 	// Assert
 	fakeit::Verify(Method(mockLogger, Log)).Exactly(fakeit::Once);
+}
+
+TEST_CASE_METHOD(CpuTests, "[CPU]: Execute \"LD A, d8\" should load the byte in the next address into register A", "[cpu]")
+{
+	// Arrange
+	uint8_t immediateValue = 0x42;
+
+	fakeit::When(Method(mockMemory, Read).Using(Cpu::InitialPc))
+		.Return(Opcodes::LD_A_d8);
+	fakeit::When(Method(mockMemory, Read).Using(Cpu::InitialPc + 1))
+		.Return(immediateValue);
+
+	// Act
+	cpu.Step();
+
+	// Assert
+	REQUIRE(cpu.GetA() == immediateValue);
 }
