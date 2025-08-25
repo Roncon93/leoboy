@@ -1,10 +1,10 @@
 #pragma once
 
 #include "../../Libraries/catch_amalgamated.hpp"
-#include "../../../LeoBoy.Core/src/Memory.h"
+#include "../../../LeoBoy.Core/src/Memory/Memory.hpp"
 
 class MemoryTests
 {
 protected:
-	Memory memory;
+	Memory::MemoryImpl memory;
 };

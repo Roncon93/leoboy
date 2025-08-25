@@ -21,16 +21,13 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Cpu.h">
+    <ClInclude Include="src\Cpu\ICpu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Memory.h">
+    <ClInclude Include="src\Memory\IMemory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Opcodes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\IMemory.h">
+    <ClInclude Include="src\Cpu\Instructions\Opcodes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Logging\ILogger.h">
@@ -44,10 +41,10 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Cpu.cpp">
+    <ClCompile Include="src\Cpu\Cpu.hpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Memory.cpp">
+    <ClCompile Include="src\Memory\Memory.hpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Logging\ConsoleLogger.cpp">

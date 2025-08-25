@@ -6,7 +6,7 @@ TEST_CASE_METHOD(MemoryTests, "[Memory]: All addresses are initialized to 0", "[
 	bool allZeroes = true;
 
 	// Act
-    for (uint16_t address = 0; address < Memory::MemorySize - 1; address++)
+    for (uint16_t address = 0; address < Memory::MemoryImpl::MemorySize - 1; address++)
 	{
 		if (memory.Read(address) != 0)
 		{

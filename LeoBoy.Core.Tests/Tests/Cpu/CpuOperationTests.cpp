@@ -1,5 +1,5 @@
 #include "CpuTestsFixture.h"
-#include "../../LeoBoy.Core/src/Opcodes.h"
+#include "../../LeoBoy.Core/src/Cpu/Instructions/Opcodes.h"
 
 TEST_CASE_METHOD(CpuTests, "[CPU]: Fetch reads memory and increases program counter", "[cpu]")
 {
@@ -7,10 +7,10 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Fetch reads memory and increases program coun
 	uint8_t firstExpectedValue = 0x74;
 	uint8_t secondExpectedValue = 0x12;
 
-	fakeit::When(Method(mockMemory, Read).Using(Cpu::InitialPc))
+	fakeit::When(Method(mockMemory, Read).Using(Cpu::CpuImpl::InitialPc))
 		.Return(firstExpectedValue);
 
-	fakeit::When(Method(mockMemory, Read).Using(Cpu::InitialPc + 1))
+	fakeit::When(Method(mockMemory, Read).Using(Cpu::CpuImpl::InitialPc + 1))
 		.Return(secondExpectedValue);
 
 	// Act
@@ -25,7 +25,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Fetch reads memory and increases program coun
 TEST_CASE_METHOD(CpuTests, "[CPU]: Execute NOP opcode does nothing", "[cpu]")
 {
 	// Arrange
-	uint8_t nopOpcode = Opcodes::NOP;
+	uint8_t nopOpcode = Cpu::Instructions::Opcodes::NOP;
 
 	// Act
 	cpu.Execute(nopOpcode);
@@ -61,7 +61,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Step should fetch, decode and execute an inst
 	// Arrange
 	uint8_t invalidOpcode = 0xFF;
 
-	fakeit::When(Method(mockMemory, Read).Using(Cpu::InitialPc))
+	fakeit::When(Method(mockMemory, Read).Using(Cpu::CpuImpl::InitialPc))
 		.Return(invalidOpcode);
 
 	// Act
@@ -76,9 +76,9 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Execute \"LD A, d8\" should load the byte in 
 	// Arrange
 	uint8_t immediateValue = 0x42;
 
-	fakeit::When(Method(mockMemory, Read).Using(Cpu::InitialPc))
-		.Return(Opcodes::LD_A_d8);
-	fakeit::When(Method(mockMemory, Read).Using(Cpu::InitialPc + 1))
+	fakeit::When(Method(mockMemory, Read).Using(Cpu::CpuImpl::InitialPc))
+		.Return(Cpu::Instructions::Opcodes::LD_A_d8);
+	fakeit::When(Method(mockMemory, Read).Using(Cpu::CpuImpl::InitialPc + 1))
 		.Return(immediateValue);
 
 	// Act
