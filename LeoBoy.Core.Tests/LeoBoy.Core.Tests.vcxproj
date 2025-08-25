@@ -22,6 +22,11 @@
     <ClCompile Include="Libraries\catch_amalgamated.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Tests\Cpu\CpuOperationTests.cpp" />
+    <ClCompile Include="Tests\Cpu\CpuPcTests.cpp" />
+    <ClCompile Include="Tests\Cpu\Instructions\Implementations\Ld\LdTests.cpp" />
+    <ClCompile Include="Tests\Cpu\Instructions\Implementations\UnimplementedTests.cpp" />
+    <ClCompile Include="Tests\Cpu\Instructions\Implementations\Nop\NopTests.cpp" />
+    <ClCompile Include="Tests\Cpu\Instructions\InstructionTestsFixture.h" />
     <ClCompile Include="Tests\Memory\MemoryTests.cpp" />
     <ClCompile Include="Tests\Cpu\CpuCombinedRegisterTests.cpp" />
     <ClCompile Include="Tests\Cpu\CpuSingleRegisterTests.cpp" />

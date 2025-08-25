@@ -39,6 +39,21 @@
     <ClCompile Include="Libraries\catch_amalgamated.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Tests\Cpu\Instructions\Implementations\Ld\LdTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\Cpu\Instructions\InstructionTestsFixture.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\Cpu\Instructions\Implementations\Nop\NopTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\Cpu\Instructions\Implementations\UnimplementedTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\Cpu\CpuPcTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Libraries\catch_amalgamated.hpp">

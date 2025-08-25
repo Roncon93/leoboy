@@ -5,7 +5,7 @@
 
 namespace Memory
 {
-	class MemoryImpl : public Memory::IMemory
+	class MemoryImpl : public IMemory
 	{
 	public:
 		/// <summary>

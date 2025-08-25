@@ -81,6 +81,21 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Registers D and E combined write test", "[cpu
     REQUIRE(resultE == expectedRegisterEValue);
 }
 
+TEST_CASE_METHOD(CpuTests, "[CPU]: Registers D and E combined read test", "[cpu]")
+{
+    // Arrange
+    cpu.SetD(0x12);
+    cpu.SetE(0x34);
+
+    uint16_t expectedValue = 0x1234;
+
+    // Act
+    uint16_t result = cpu.GetDE();
+
+    // Assert
+    REQUIRE(result == expectedValue);
+}
+
 TEST_CASE_METHOD(CpuTests, "[CPU]: Registers H and L combined write test", "[cpu]")
 {
     // Arrange
@@ -96,4 +111,19 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Registers H and L combined write test", "[cpu
     // Assert
     REQUIRE(resultH == expectedRegisterHValue);
     REQUIRE(resultL == expectedRegisterLValue);
+}
+
+TEST_CASE_METHOD(CpuTests, "[CPU]: Registers H and L combined read test", "[cpu]")
+{
+    // Arrange
+    cpu.SetH(0x12);
+    cpu.SetL(0x34);
+
+    uint16_t expectedValue = 0x1234;
+
+    // Act
+    uint16_t result = cpu.GetHL();
+
+    // Assert
+    REQUIRE(result == expectedValue);
 }

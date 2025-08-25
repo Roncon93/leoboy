@@ -66,6 +66,11 @@ namespace Cpu
         /// </summary>
         virtual void Step() = 0;
 
+		/// <summary>
+		/// Gets the current value of the Program Counter (PC).
+		/// </summary>
+        virtual uint16_t GetPc() = 0;
+
         /// <summary>
         /// Gets the combined 16-bit AF register.
         /// </summary>
@@ -73,21 +78,9 @@ namespace Cpu
         virtual uint16_t GetAF() const = 0;
 
         /// <summary>
-        /// Sets the combined 16-bit AF register.
-        /// </summary>
-        /// <param name="value">The 16-bit value to set.</param>
-        virtual void SetAF(uint16_t value) = 0;
-
-        /// <summary>
         /// Gets the combined 16-bit BC register.
         /// </summary>
         virtual uint16_t GetBC() const = 0;
-
-        /// <summary>
-        /// Sets the combined 16-bit BC register.
-        /// </summary>
-        /// <param name="value">The 16-bit value to set.</param>
-        virtual void SetBC(uint16_t value) = 0;
 
         /// <summary>
         /// Gets the combined 16-bit DE register.
@@ -95,21 +88,9 @@ namespace Cpu
         virtual uint16_t GetDE() const = 0;
 
         /// <summary>
-        /// Sets the combined 16-bit DE register.
-        /// </summary>
-        /// <param name="value">The 16-bit value to set.</param>
-        virtual void SetDE(uint16_t value) = 0;
-
-        /// <summary>
         /// Gets the combined 16-bit HL register.
         /// </summary>
         virtual uint16_t GetHL() const = 0;
-
-        /// <summary>
-        /// Sets the combined 16-bit HL register.
-        /// </summary>
-        /// <param name="value">The 16-bit value to set.</param>
-        virtual void SetHL(uint16_t value) = 0;
 
         /// <summary>
         /// Gets the value of the accumulator register (A).
@@ -117,21 +98,9 @@ namespace Cpu
         virtual uint8_t GetA() const = 0;
 
         /// <summary>
-        /// Sets the value of the accumulator register (A).
-        /// </summary>
-        /// <param name="value">The 8-bit value to set.</param>
-        virtual void SetA(uint8_t value) = 0;
-
-        /// <summary>
         /// Gets the value of the flags register (F).
         /// </summary>
         virtual uint8_t GetF() const = 0;
-
-        /// <summary>
-        /// Sets the value of the flags register (F).
-        /// </summary>
-        /// <param name="value">The 8-bit value to set.</param>
-        virtual void SetF(uint8_t value) = 0;
 
         /// <summary>
         /// Gets the value of the B register.
@@ -139,21 +108,9 @@ namespace Cpu
         virtual uint8_t GetB() const = 0;
 
         /// <summary>
-        /// Sets the value of the B register.
-        /// </summary>
-        /// <param name="value">The 8-bit value to set.</param>
-        virtual void SetB(uint8_t value) = 0;
-
-        /// <summary>
         /// Gets the value of the C register.
         /// </summary>
         virtual uint8_t GetC() const = 0;
-
-        /// <summary>
-        /// Sets the value of the C register.
-        /// </summary>
-        /// <param name="value">The 8-bit value to set.</param>
-        virtual void SetC(uint8_t value) = 0;
 
         /// <summary>
         /// Gets the value of the D register.
@@ -161,21 +118,9 @@ namespace Cpu
         virtual uint8_t GetD() const = 0;
 
         /// <summary>
-        /// Sets the value of the D register.
-        /// </summary>
-        /// <param name="value">The 8-bit value to set.</param>
-        virtual void SetD(uint8_t value) = 0;
-
-        /// <summary>
         /// Gets the value of the E register.
         /// </summary>
         virtual uint8_t GetE() const = 0;
-
-        /// <summary>
-        /// Sets the value of the E register.
-        /// </summary>
-        /// <param name="value">The 8-bit value to set.</param>
-        virtual void SetE(uint8_t value) = 0;
 
         /// <summary>
         /// Gets the value of the H register.
@@ -183,20 +128,8 @@ namespace Cpu
         virtual uint8_t GetH() const = 0;
 
         /// <summary>
-        /// Sets the value of the H register.
-        /// </summary>
-        /// <param name="value">The 8-bit value to set.</param>
-        virtual void SetH(uint8_t value) = 0;
-
-        /// <summary>
         /// Gets the value of the L register.
         /// </summary>
         virtual uint8_t GetL() const = 0;
-
-        /// <summary>
-        /// Sets the value of the L register.
-        /// </summary>
-        /// <param name="value">The 8-bit value to set.</param>
-        virtual void SetL(uint8_t value) = 0;
     };
 }

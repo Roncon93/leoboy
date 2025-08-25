@@ -3,13 +3,19 @@
 #include <cstdint>
 #include <string>
 
-class ILogger
+namespace Logging
 {
-public:
 	/// <summary>
-	/// Logs a message with the specified severity level.
+	/// Interface for logging messages with various severity levels.
 	/// </summary>
-	/// <param name="level">The severity level of the log message.</param>
-	/// <param name="message">The message to log.</param>
-	virtual void Log(int level, const std::string& message) const;
-};
+	class ILogger
+	{
+	public:
+		/// <summary>
+		/// Logs a message with the specified severity level.
+		/// </summary>
+		/// <param name="level">The severity level of the log message.</param>
+		/// <param name="message">The message to log.</param>
+		virtual void Log(int level, const std::string& message) const;
+	};
+}

@@ -138,6 +138,10 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="src\Cpu\ICpu.h" />
+    <ClInclude Include="src\Cpu\Instructions\IInstructionRegistrator.h" />
+    <ClInclude Include="src\Cpu\Instructions\Implementations\Ld\Ld.h" />
+    <ClInclude Include="src\Cpu\Instructions\Implementations\Nop\Nop.h" />
+    <ClInclude Include="src\Cpu\Instructions\Implementations\Unimplemented.h" />
     <ClInclude Include="src\Logging\ILogger.h" />
     <ClInclude Include="src\Memory\IMemory.h" />
     <ClInclude Include="src\Cpu\Instructions\Opcodes.h" />
@@ -151,6 +155,13 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\Cpu\Cpu.hpp" />
+    <ClCompile Include="src\Cpu\Instructions\IInstructionLookUp.h" />
+    <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_A_d8.cpp" />
+    <ClCompile Include="src\Cpu\Instructions\Implementations\Nop\Nop.cpp" />
+    <ClCompile Include="src\Cpu\Instructions\Implementations\Unimplemented.cpp" />
+    <ClCompile Include="src\Cpu\Instructions\Instruction.h" />
+    <ClCompile Include="src\Cpu\Instructions\InstructionLookUp.hpp" />
+    <ClCompile Include="src\Cpu\IWriteCpu.h" />
     <ClCompile Include="src\Logging\ConsoleLogger.cpp" />
     <ClCompile Include="src\Memory\Memory.hpp" />
   </ItemGroup>

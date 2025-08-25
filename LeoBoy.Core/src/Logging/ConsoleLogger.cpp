@@ -1,11 +1,14 @@
-#include "ILogger.h"
 #include <iostream>
+#include "ILogger.h"
 
-class ConsoleLogger : public ILogger
+namespace Logging
 {
-public:
-	void Log(int level, const std::string& message) const override
+	class ConsoleLogger : public ILogger
 	{
-		std::cout << "Log Level: " << level << " - " << message << std::endl;
-	}
-};
+	public:
+		void Log(int level, const std::string& message) const override
+		{
+			std::cout << "Log Level: " << level << " - " << message << std::endl;
+		}
+	};
+}

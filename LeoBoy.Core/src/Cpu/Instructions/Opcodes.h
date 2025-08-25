@@ -12,6 +12,11 @@ namespace Cpu
 		namespace Opcodes
 		{
 			/// <summary>
+			/// Placeholder for unimplemented opcodes.
+			/// </summary>
+			static constexpr uint8_t UNIMPLEMENTED = 0xFF;
+
+			/// <summary>
 			/// No Operation - does nothing.
 			/// </summary>
 			/// <remarks>

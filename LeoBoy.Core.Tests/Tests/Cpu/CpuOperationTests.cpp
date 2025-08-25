@@ -22,68 +22,24 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Fetch reads memory and increases program coun
 	REQUIRE(secondResult == secondExpectedValue);
 }
 
-TEST_CASE_METHOD(CpuTests, "[CPU]: Execute NOP opcode does nothing", "[cpu]")
-{
-	// Arrange
-	uint8_t nopOpcode = Cpu::Instructions::Opcodes::NOP;
-
-	// Act
-	cpu.Execute(nopOpcode);
-
-	// Assert
-	REQUIRE(cpu.GetAF() == 0x0000);
-	REQUIRE(cpu.GetBC() == 0x0000);
-	REQUIRE(cpu.GetDE() == 0x0000);
-	REQUIRE(cpu.GetHL() == 0x0000);
-	REQUIRE(cpu.GetA() == 0x00);
-	REQUIRE(cpu.GetB() == 0x00);
-	REQUIRE(cpu.GetC() == 0x00);
-	REQUIRE(cpu.GetD() == 0x00);
-	REQUIRE(cpu.GetE() == 0x00);
-	REQUIRE(cpu.GetH() == 0x00);
-	REQUIRE(cpu.GetL() == 0x00);
-}
-
-TEST_CASE_METHOD(CpuTests, "[CPU]: Execute with invalid opcode should throw error", "[cpu]")
-{
-	// Arrange
-	uint8_t invalidOpcode = 0xFF;
-
-	// Act
-	cpu.Execute(invalidOpcode);
-
-	// Assert
-	fakeit::Verify(Method(mockLogger, Log)).Exactly(fakeit::Once);
-}
-
 TEST_CASE_METHOD(CpuTests, "[CPU]: Step should fetch, decode and execute an instruction", "[cpu]")
 {
 	// Arrange
-	uint8_t invalidOpcode = 0xFF;
+	uint8_t testOpcode = 0xFF;
+	bool instructionExecuted = false;
 
 	fakeit::When(Method(mockMemory, Read).Using(Cpu::CpuImpl::InitialPc))
-		.Return(invalidOpcode);
+		.Return(testOpcode);
+
+	fakeit::When(Method(mockInstructionLookUp, Get).Using(testOpcode))
+		.Return([&instructionExecuted](Cpu::IWriteCpu& cpu, Memory::IMemory& memory, Logging::ILogger& logger)
+			{
+				instructionExecuted = true;
+			});
 
 	// Act
 	cpu.Step();
 
 	// Assert
-	fakeit::Verify(Method(mockLogger, Log)).Exactly(fakeit::Once);
-}
-
-TEST_CASE_METHOD(CpuTests, "[CPU]: Execute \"LD A, d8\" should load the byte in the next address into register A", "[cpu]")
-{
-	// Arrange
-	uint8_t immediateValue = 0x42;
-
-	fakeit::When(Method(mockMemory, Read).Using(Cpu::CpuImpl::InitialPc))
-		.Return(Cpu::Instructions::Opcodes::LD_A_d8);
-	fakeit::When(Method(mockMemory, Read).Using(Cpu::CpuImpl::InitialPc + 1))
-		.Return(immediateValue);
-
-	// Act
-	cpu.Step();
-
-	// Assert
-	REQUIRE(cpu.GetA() == immediateValue);
+	REQUIRE(instructionExecuted == true);
 }
