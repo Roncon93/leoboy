@@ -30,9 +30,9 @@ namespace Cpu
 			InstructionLookUpImpl()
 			{
 				// Initialize all instructions to a default no-op to handle unimplemented opcodes gracefully
-				for (uint8_t opcode = 0; opcode < 0xFF; opcode++)
+				for (uint16_t opcode = 0; opcode < 0x100; opcode++)
 				{
-					Implementations::Unimplemented(*this, opcode);
+					Implementations::Unimplemented(*this, static_cast<uint8_t>(opcode));
 				}
 
 				// NOP
@@ -42,6 +42,7 @@ namespace Cpu
 				Implementations::Ld::Ld_A_d8(*this);
 				Implementations::Ld::Ld_A_HL(*this);
 				Implementations::Ld::Ld_HL_A(*this);
+				Implementations::Ld::Ld_HL_d16(*this);
 			}
 
 			void Register(uint8_t opcode, Instruction instruction) override

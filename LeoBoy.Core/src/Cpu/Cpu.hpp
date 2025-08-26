@@ -39,17 +39,17 @@ namespace Cpu
             Execute(Fetch());
         }
 
-        uint16_t GetPc() override
+        const uint16_t GetPc() override
         {
             return pc;
 		}
 
-        void IncrementPc() override
+        uint16_t IncrementPc() override
         {
-            pc++;
+            return pc++;
 		}
 
-        uint16_t GetAF() const override
+        const uint16_t GetAF() override
         {
             return GetCombinedRegister(a, f);
         }
@@ -60,7 +60,7 @@ namespace Cpu
             SetF(f);
         }
 
-		uint16_t GetBC() const override
+        const uint16_t GetBC() override
         {
             return GetCombinedRegister(b, c);
         }
@@ -70,7 +70,7 @@ namespace Cpu
             SetCombinedRegister(value, b, c);
         }
 
-		uint16_t GetDE() const override
+        const uint16_t GetDE() override
         {
             return GetCombinedRegister(d, e);
         }
@@ -80,7 +80,7 @@ namespace Cpu
             SetCombinedRegister(value, d, e);
         }
 
-		uint16_t GetHL() const override
+        const uint16_t GetHL() override
         {
             return GetCombinedRegister(h, l);
         }
@@ -90,7 +90,7 @@ namespace Cpu
             SetCombinedRegister(value, h, l);
         }
 
-        uint8_t GetA() const override
+        const uint8_t GetA() override
         {
             return a;
         }
@@ -100,7 +100,7 @@ namespace Cpu
             a = value;
         }
 
-		uint8_t GetF() const override
+        const uint8_t GetF() override
         {
             return f;
         }
@@ -110,7 +110,7 @@ namespace Cpu
             f = value & 0xF0;
         }
 
-        uint8_t GetB() const override
+        const uint8_t GetB() override
         {
             return b;
         }
@@ -120,7 +120,7 @@ namespace Cpu
             b = value;
         }
 
-		uint8_t GetC() const override
+        const uint8_t GetC() override
         {
             return c;
         }
@@ -130,7 +130,7 @@ namespace Cpu
             c = value;
         }
 
-		uint8_t GetD() const override
+        const uint8_t GetD() override
         {
             return d;
         }
@@ -140,7 +140,7 @@ namespace Cpu
             d = value;
         }
 
-		uint8_t GetE() const override
+        const uint8_t GetE() override
         {
             return e;
         }
@@ -150,7 +150,7 @@ namespace Cpu
             e = value;
         }
 
-		uint8_t GetH() const override
+        const uint8_t GetH() override
         {
             return h;
         }
@@ -160,7 +160,7 @@ namespace Cpu
             h = value;
         }
 
-		uint8_t GetL() const override
+        const uint8_t GetL() override
         {
             return l;
         }

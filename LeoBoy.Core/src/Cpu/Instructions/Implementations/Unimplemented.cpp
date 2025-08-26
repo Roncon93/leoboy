@@ -12,7 +12,7 @@ namespace Cpu
 		{
 			void Unimplemented(IInstructionRegistrator& registrator, uint8_t opcode)
 			{
-				registrator.Register(Opcodes::UNIMPLEMENTED, [opcode](Cpu::IWriteCpu& cpu, Memory::IMemory& memory, Logging::ILogger& logger)
+				registrator.Register(opcode, [opcode](Cpu::IWriteCpu& cpu, Memory::IMemory& memory, Logging::ILogger& logger)
 					{
 						// Log unimplemented opcode usage
 						std::stringstream stream;

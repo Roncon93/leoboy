@@ -16,9 +16,10 @@ namespace Cpu
 		virtual ~IWriteCpu() = default;
 
 		/// <summary>
-		/// Increments the Program Counter (PC) by 1.
+		/// Retrieves the current program counter (PC) value and increments it by 1.
 		/// </summary>
-		virtual void IncrementPc() = 0;
+		/// <returns>The current value of the program counter before it is incremented.</returns>
+		virtual uint16_t IncrementPc() = 0;
 
 		/// <summary>
 		/// Sets the combined 16-bit AF register.

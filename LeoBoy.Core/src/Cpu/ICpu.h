@@ -69,67 +69,67 @@ namespace Cpu
 		/// <summary>
 		/// Gets the current value of the Program Counter (PC).
 		/// </summary>
-        virtual uint16_t GetPc() = 0;
+        virtual const uint16_t GetPc() = 0;
 
         /// <summary>
         /// Gets the combined 16-bit AF register.
         /// </summary>
         /// <returns>The 16-bit AF register value.</returns>
-        virtual uint16_t GetAF() const = 0;
+        virtual const uint16_t GetAF() = 0;
 
         /// <summary>
         /// Gets the combined 16-bit BC register.
         /// </summary>
-        virtual uint16_t GetBC() const = 0;
+        virtual const uint16_t GetBC() = 0;
 
         /// <summary>
         /// Gets the combined 16-bit DE register.
         /// </summary>
-        virtual uint16_t GetDE() const = 0;
+        virtual const uint16_t GetDE() = 0;
 
         /// <summary>
         /// Gets the combined 16-bit HL register.
         /// </summary>
-        virtual uint16_t GetHL() const = 0;
+        virtual const uint16_t GetHL() = 0;
 
         /// <summary>
         /// Gets the value of the accumulator register (A).
         /// </summary>
-        virtual uint8_t GetA() const = 0;
+        virtual const uint8_t GetA() = 0;
 
         /// <summary>
         /// Gets the value of the flags register (F).
         /// </summary>
-        virtual uint8_t GetF() const = 0;
+        virtual const uint8_t GetF() = 0;
 
         /// <summary>
         /// Gets the value of the B register.
         /// </summary>
-        virtual uint8_t GetB() const = 0;
+        virtual const uint8_t GetB() = 0;
 
         /// <summary>
         /// Gets the value of the C register.
         /// </summary>
-        virtual uint8_t GetC() const = 0;
+        virtual const uint8_t GetC() = 0;
 
         /// <summary>
         /// Gets the value of the D register.
         /// </summary>
-        virtual uint8_t GetD() const = 0;
+        virtual const uint8_t GetD() = 0;
 
         /// <summary>
         /// Gets the value of the E register.
         /// </summary>
-        virtual uint8_t GetE() const = 0;
+        virtual const uint8_t GetE() = 0;
 
         /// <summary>
         /// Gets the value of the H register.
         /// </summary>
-        virtual uint8_t GetH() const = 0;
+        virtual const uint8_t GetH() = 0;
 
         /// <summary>
         /// Gets the value of the L register.
         /// </summary>
-        virtual uint8_t GetL() const = 0;
+        virtual const uint8_t GetL() = 0;
     };
 }

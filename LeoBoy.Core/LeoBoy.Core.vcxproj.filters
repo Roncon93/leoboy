@@ -89,5 +89,11 @@
     <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_HL_A.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_HL_d16.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utilities\BitOperations.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -42,6 +42,12 @@ namespace Cpu
 			/// which stores the value from register A into the memory address pointed to by the HL register pair.
 			/// </summary>
 			static constexpr uint8_t LD_HL_A = 0x77;
+
+			/// <summary>
+			/// Represents the opcode for the "LD (HL), d16" instruction
+			/// which stores the value in a memory address into the HL register pair.
+			/// </summary>
+			static constexpr uint8_t LD_HL_d16 = 0x21;
 		}
 	}
 }
