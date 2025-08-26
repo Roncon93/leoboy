@@ -30,6 +30,18 @@ namespace Cpu
 			/// which loads an immediate 8-bit value into the accumulator register A.
 			/// </summary>
 			static constexpr uint8_t LD_A_d8 = 0x3E;
+
+			/// <summary>
+			/// Represents the opcode for the "LD A, (HL)" instruction
+			/// which loads the value from the memory address pointed to by the HL register pair into register A.
+			/// </summary>
+			static constexpr uint8_t LD_A_HL = 0x7E;
+
+			/// <summary>
+			/// Represents the opcode for the "LD (HL), A" instruction
+			/// which stores the value from register A into the memory address pointed to by the HL register pair.
+			/// </summary>
+			static constexpr uint8_t LD_HL_A = 0x77;
 		}
 	}
 }

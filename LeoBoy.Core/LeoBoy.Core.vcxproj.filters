@@ -59,7 +59,7 @@
     <ClCompile Include="src\Memory\Memory.hpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Logging\ConsoleLogger.cpp">
+    <ClCompile Include="src\Logging\ConsoleLogger.hpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Cpu\Instructions\IInstructionLookUp.h">
@@ -81,6 +81,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Cpu\Instructions\Implementations\Unimplemented.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_A_HL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_HL_A.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

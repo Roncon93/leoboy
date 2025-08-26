@@ -18,35 +18,61 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Libraries\catch_amalgamated.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Tests\Cpu\CpuCombinedRegisterTests.cpp" />
+    <ClCompile Include="Tests\Cpu\CpuOperationTests.cpp" />
+    <ClCompile Include="Tests\Cpu\CpuPcTests.cpp" />
+    <ClCompile Include="Tests\Cpu\CpuSingleRegisterTests.cpp" />
+    <ClCompile Include="Tests\Cpu\CpuTestsFixture.h" />
+    <ClCompile Include="Tests\Cpu\Instructions\Implementations\Ld\LdTests.cpp" />
+    <ClCompile Include="Tests\Cpu\Instructions\Implementations\UnimplementedTests.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Libraries\catch_amalgamated.hpp" />
+    <ClInclude Include="Libraries\fakeit.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LeoBoy.Core\LeoBoy.Core.vcxproj">
+      <Project>{9c05a578-c0b6-4440-8ab0-87629a22dbd8}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="LastCoverageResults.log" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9c05a578-c0b6-4440-8ab0-87629a22dbd8}</ProjectGuid>
-    <RootNamespace>LeoBoyCore2</RootNamespace>
+    <ProjectGuid>{4081345C-AD97-4374-ABC4-3AE9D2233A05}</ProjectGuid>
+    <RootNamespace>LeoBoyCoreTests</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -74,15 +100,15 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core.Tests.Unit\Libraries;C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>
-      </SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Cpu.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -91,30 +117,30 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core.Tests.Unit\Libraries;C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>
-      </SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Cpu.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core.Tests.Unit\Libraries;C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>
-      </SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Cpu.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -123,50 +149,17 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core.Tests.Unit\Libraries;C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>
-      </SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Roncon\Documents\Git\leoboy\LeoBoy.Core\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Cpu.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="framework.h" />
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="src\Cpu\ICpu.h" />
-    <ClInclude Include="src\Cpu\Instructions\IInstructionRegistrator.h" />
-    <ClInclude Include="src\Cpu\Instructions\Implementations\Ld\Ld.h" />
-    <ClInclude Include="src\Cpu\Instructions\Implementations\Nop\Nop.h" />
-    <ClInclude Include="src\Cpu\Instructions\Implementations\Unimplemented.h" />
-    <ClInclude Include="src\Logging\ILogger.h" />
-    <ClInclude Include="src\Memory\IMemory.h" />
-    <ClInclude Include="src\Cpu\Instructions\Opcodes.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="LeoBoy.Core.cpp" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="src\Cpu\Cpu.hpp" />
-    <ClCompile Include="src\Cpu\Instructions\IInstructionLookUp.h" />
-    <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_A_d8.cpp" />
-    <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_A_HL.cpp" />
-    <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_HL_A.cpp" />
-    <ClCompile Include="src\Cpu\Instructions\Implementations\Nop\Nop.cpp" />
-    <ClCompile Include="src\Cpu\Instructions\Implementations\Unimplemented.cpp" />
-    <ClCompile Include="src\Cpu\Instructions\Instruction.h" />
-    <ClCompile Include="src\Cpu\Instructions\InstructionLookUp.hpp" />
-    <ClCompile Include="src\Cpu\IWriteCpu.h" />
-    <ClCompile Include="src\Logging\ConsoleLogger.hpp" />
-    <ClCompile Include="src\Memory\Memory.hpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

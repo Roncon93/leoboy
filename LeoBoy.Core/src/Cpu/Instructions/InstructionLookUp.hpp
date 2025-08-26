@@ -40,6 +40,8 @@ namespace Cpu
 
 				// LD
 				Implementations::Ld::Ld_A_d8(*this);
+				Implementations::Ld::Ld_A_HL(*this);
+				Implementations::Ld::Ld_HL_A(*this);
 			}
 
 			void Register(uint8_t opcode, Instruction instruction) override

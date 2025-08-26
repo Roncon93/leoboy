@@ -12,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.runsettings = .runsettings
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LeoBoy.Core.Tests", "LeoBoy.Core.Tests\LeoBoy.Core.Tests.vcxproj", "{BBED2602-A519-4A3C-8F10-A44131F8BB9D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LeoBoy.Core.Tests.Unit", "LeoBoy.Core.Tests.Unit\LeoBoy.Core.Tests.Unit.vcxproj", "{BBED2602-A519-4A3C-8F10-A44131F8BB9D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LeoBoy.Core.Tests.Integration", "LeoBoy.Core.Tests.Integration\LeoBoy.Core.Tests.Integration.vcxproj", "{4081345C-AD97-4374-ABC4-3AE9D2233A05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +48,14 @@ Global
 		{BBED2602-A519-4A3C-8F10-A44131F8BB9D}.Release|x64.Build.0 = Release|x64
 		{BBED2602-A519-4A3C-8F10-A44131F8BB9D}.Release|x86.ActiveCfg = Release|Win32
 		{BBED2602-A519-4A3C-8F10-A44131F8BB9D}.Release|x86.Build.0 = Release|Win32
+		{4081345C-AD97-4374-ABC4-3AE9D2233A05}.Debug|x64.ActiveCfg = Debug|x64
+		{4081345C-AD97-4374-ABC4-3AE9D2233A05}.Debug|x64.Build.0 = Debug|x64
+		{4081345C-AD97-4374-ABC4-3AE9D2233A05}.Debug|x86.ActiveCfg = Debug|Win32
+		{4081345C-AD97-4374-ABC4-3AE9D2233A05}.Debug|x86.Build.0 = Debug|Win32
+		{4081345C-AD97-4374-ABC4-3AE9D2233A05}.Release|x64.ActiveCfg = Release|x64
+		{4081345C-AD97-4374-ABC4-3AE9D2233A05}.Release|x64.Build.0 = Release|x64
+		{4081345C-AD97-4374-ABC4-3AE9D2233A05}.Release|x86.ActiveCfg = Release|Win32
+		{4081345C-AD97-4374-ABC4-3AE9D2233A05}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

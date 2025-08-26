@@ -7,6 +7,7 @@
 #include "../../LeoBoy.Core/src/Cpu/Instructions/IInstructionLookUp.h"
 #include "../../LeoBoy.Core/src/Cpu/Cpu.hpp"
 #include "../../LeoBoy.Core/src/Cpu/IWriteCpu.h"
+#include "../../LeoBoy.Core/src/Cpu/Instructions/Opcodes.h"
 
 class CpuTests
 {
