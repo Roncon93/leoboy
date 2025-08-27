@@ -1,0 +1,80 @@
+\doxysection{Logging\+::Console\+Logger Class Reference}
+\hypertarget{class_logging_1_1_console_logger}{}\label{class_logging_1_1_console_logger}\index{Logging::ConsoleLogger@{Logging::ConsoleLogger}}
+
+
+{\ttfamily \#include $<$Console\+Logger.\+hpp$>$}
+
+
+
+Inheritance diagram for Logging\+::Console\+Logger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{class_logging_1_1_console_logger__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Logging\+::Console\+Logger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{class_logging_1_1_console_logger__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_logging_1_1_console_logger_a2edd34ef3b4aecd96acf896d4b098fae}{Log}} (int level, const std\+::string \&message) const override
+\begin{DoxyCompactList}\small\item\em Logs a message with the specified severity level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_console_logger_8hpp_source_l00008}{8}} of file \mbox{\hyperlink{_console_logger_8hpp_source}{Console\+Logger.\+hpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_logging_1_1_console_logger_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_logging_1_1_console_logger_a2edd34ef3b4aecd96acf896d4b098fae}\index{Logging::ConsoleLogger@{Logging::ConsoleLogger}!Log@{Log}}
+\index{Log@{Log}!Logging::ConsoleLogger@{Logging::ConsoleLogger}}
+\doxysubsubsection{\texorpdfstring{Log()}{Log()}}
+{\footnotesize\ttfamily \label{class_logging_1_1_console_logger_a2edd34ef3b4aecd96acf896d4b098fae} 
+void Logging\+::\+Console\+Logger\+::\+Log (\begin{DoxyParamCaption}\item[{int}]{level}{, }\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Logs a message with the specified severity level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The severity level of the log message.\\
+\hline
+{\em message} & The message to log.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_logging_1_1_i_logger_a16ba152627e274f262514c849980ffd1}{Logging\+::\+ILogger}}.
+
+
+
+Definition at line \mbox{\hyperlink{_console_logger_8hpp_source_l00011}{11}} of file \mbox{\hyperlink{_console_logger_8hpp_source}{Console\+Logger.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Log\ Level:\ "{}}\ <<\ level\ <<\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ message\ <<\ std::endl;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Leo\+Boy.\+Core/src/\+Logging/\mbox{\hyperlink{_console_logger_8hpp}{Console\+Logger.\+hpp}}\end{DoxyCompactItemize}

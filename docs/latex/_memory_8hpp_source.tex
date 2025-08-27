@@ -1,0 +1,37 @@
+\doxysection{Memory.\+hpp}
+\hypertarget{_memory_8hpp_source}{}\label{_memory_8hpp_source}\index{LeoBoy.Core/src/Memory/Memory.hpp@{LeoBoy.Core/src/Memory/Memory.hpp}}
+\mbox{\hyperlink{_memory_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_memory_8h}{IMemory.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_memory}{Memory}}}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00008}\mbox{\hyperlink{class_memory_1_1_memory_impl}{00008}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_memory_1_1_memory_impl_afb9b5476fc233335b50a87cb067c2f70}{MemoryImpl}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_memory_1_1_i_memory}{IMemory}}}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00014}\mbox{\hyperlink{class_memory_1_1_memory_impl_a80cec429506734aacf319fa9fddcf73b}{00014}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_memory_1_1_memory_impl_a80cec429506734aacf319fa9fddcf73b}{MemorySize}}\ =\ 0x10000;\ \textcolor{comment}{//\ 64\ KB}}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00019}\mbox{\hyperlink{class_memory_1_1_memory_impl_afb9b5476fc233335b50a87cb067c2f70}{00019}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_memory_1_1_memory_impl_afb9b5476fc233335b50a87cb067c2f70}{MemoryImpl}}()}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ data.fill(0);}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00024}\mbox{\hyperlink{class_memory_1_1_memory_impl_a25e788e307f6f6d3dfff7b6e6a0dce47}{00024}}\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_memory_1_1_memory_impl_a25e788e307f6f6d3dfff7b6e6a0dce47}{Read}}(uint16\_t\ address)\textcolor{keyword}{\ const\ override}}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00025}00025\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ data[address];}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00029}\mbox{\hyperlink{class_memory_1_1_memory_impl_af6f8e8782c9fa51acc727b014a1dac0f}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_memory_1_1_memory_impl_af6f8e8782c9fa51acc727b014a1dac0f}{Write}}(uint16\_t\ address,\ uint8\_t\ value)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00030}00030\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ data[address]\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00039}00039\ \ \ \ \ \ \ \ \ std::array<uint8\_t,\ MemorySize>\ data;}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00040}00040\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_memory_8hpp_source_l00041}00041\ \}}
+
+\end{DoxyCode}

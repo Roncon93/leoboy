@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_cpu_1_1_i_cpu.html" title="Emulates the Game Boy CPU registers and basic operations." alt="" coords="5,5,87,32"/>
+<area shape="rect" id="Node000001" href="$class_cpu_1_1_i_write_cpu.html" title="Interface for CPU operations that modify the CPU state (registers, program counter,..." alt="" coords="135,5,246,32"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="102,16,134,16,134,21,102,21"/>
+<area shape="rect" id="Node000002" href="$class_cpu_1_1_cpu_impl.html" title=" " alt="" coords="294,5,396,32"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="262,16,294,16,294,21,262,21"/>
+</map>

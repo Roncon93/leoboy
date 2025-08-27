@@ -1,0 +1,22 @@
+<map id="LeoBoy.Core/src/Cpu/Instructions/IInstructionRegistrator.h" name="LeoBoy.Core/src/Cpu/Instructions/IInstructionRegistrator.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,168,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="170,336,230,363"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,66,42,96,23,133,14,173,14,193,20,212,31,233,45,252,80,285,119,311,156,329,154,334,117,315,77,289,41,256,26,236,15,214,9,194,9,173,18,131,38,94,59,63"/>
+<area shape="rect" id="Node000003" href="$_instruction_8h.html" title=" " alt="" coords="134,112,228,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="119,62,158,99,155,103,115,66"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="29,187,106,213"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="163,141,102,180,99,176,160,137"/>
+<area shape="rect" id="Node000005" href="$_i_write_cpu_8h.html" title=" " alt="" coords="130,187,232,213"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="184,139,184,171,178,171,178,139"/>
+<area shape="rect" id="Node000007" href="$_i_memory_8h.html" title=" " alt="" coords="188,261,345,288"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="200,137,224,158,246,185,259,215,266,245,261,246,254,217,242,188,220,161,197,141"/>
+<area shape="rect" id="Node000008" href="$_i_logger_8h.html" title=" " alt="" coords="308,187,457,213"/>
+<area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="217,137,334,178,332,183,215,142"/>
+<area shape="rect" id="Node000006" href="$_i_cpu_8h.html" title=" " alt="" coords="103,261,163,288"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="175,215,152,250,148,247,171,212"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="147,287,180,323,176,326,143,290"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="257,290,223,326,220,323,253,287"/>
+<area shape="poly" id="edge10_Node000008_Node000002" title=" " alt="" coords="385,214,379,251,371,271,359,290,334,311,304,327,246,344,244,339,302,322,331,307,355,286,367,269,374,249,380,213"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="420,261,473,288"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="396,212,427,248,423,251,392,216"/>
+</map>

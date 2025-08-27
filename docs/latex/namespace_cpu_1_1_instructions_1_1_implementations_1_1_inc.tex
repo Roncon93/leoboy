@@ -1,0 +1,61 @@
+\doxysection{Cpu\+::Instructions\+::Implementations\+::Inc Namespace Reference}
+\hypertarget{namespace_cpu_1_1_instructions_1_1_implementations_1_1_inc}{}\label{namespace_cpu_1_1_instructions_1_1_implementations_1_1_inc}\index{Cpu::Instructions::Implementations::Inc@{Cpu::Instructions::Implementations::Inc}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_inc_aa06cf09d6db8a47ddec2cbfedbf176f6}{Inc\+\_\+A}} (\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstruction\+Registrator}} \&registrator)
+\begin{DoxyCompactList}\small\item\em Implementation of the "{}\+INC A"{} instruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespace_cpu_1_1_instructions_1_1_implementations_1_1_inc_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_cpu_1_1_instructions_1_1_implementations_1_1_inc_aa06cf09d6db8a47ddec2cbfedbf176f6}\index{Cpu::Instructions::Implementations::Inc@{Cpu::Instructions::Implementations::Inc}!Inc\_A@{Inc\_A}}
+\index{Inc\_A@{Inc\_A}!Cpu::Instructions::Implementations::Inc@{Cpu::Instructions::Implementations::Inc}}
+\doxysubsubsection{\texorpdfstring{Inc\_A()}{Inc\_A()}}
+{\footnotesize\ttfamily \label{namespace_cpu_1_1_instructions_1_1_implementations_1_1_inc_aa06cf09d6db8a47ddec2cbfedbf176f6} 
+void Cpu\+::\+Instructions\+::\+Implementations\+::\+Inc\+::\+Inc\+\_\+A (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstruction\+Registrator}} \&}]{registrator}{}\end{DoxyParamCaption})}
+
+
+
+Implementation of the "{}\+INC A"{} instruction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em registrator} & The instruction registrator.\\
+\hline
+\end{DoxyParams}
+
+
+This instruction increases the value of the A register by 1 and sets the register F flags with the results. 
+
+Definition at line \mbox{\hyperlink{_inc___a_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_inc___a_8cpp_source}{Inc\+\_\+\+A.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registrator.\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator_a551514e0250033e37c256e97421aa4db}{Register}}(Opcodes::Inc\_A,\ [](\mbox{\hyperlink{class_cpu_1_1_i_write_cpu}{Cpu::IWriteCpu}}\&\ cpu,\ \mbox{\hyperlink{class_memory_1_1_i_memory}{Memory::IMemory}}\&\ memory,\ \mbox{\hyperlink{class_logging_1_1_i_logger}{Logging::ILogger}}\&\ logger)}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Increment\ the\ value\ in\ register\ A}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ originalValue\ =\ cpu.\mbox{\hyperlink{class_cpu_1_1_i_cpu_ab761eaadaece1fe265cf47beb646a455}{GetA}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ result\ =\ originalValue\ +\ 1;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpu.\mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a72daea1c762bddbea86c6fbe44380ca7}{SetA}}(result);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Zero\ flag\ if\ result\ is\ zero}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result\ ==\ 0)}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpu.\mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a98134768d9dda5b6cb1e93787392e1a5}{SetZeroFlag}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Half\ Carry\ flag\ if\ there\ was\ a\ carry\ from\ bit\ 3\ to\ bit\ 4}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((originalValue\ \&\ 0x0F)\ +\ 1\ >\ 0x0F)}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpu.\mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a961bf4a67d2ebc847b19be7a10c69c6f}{SetHalfCarryFlag}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reset\ Subtract\ flag\ (bit\ 6)\ since\ this\ is\ an\ addition\ operation}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpu.\mbox{\hyperlink{class_cpu_1_1_i_write_cpu_ad235404fb4eac88cc3e1de26d3be39ed}{SetSubtractFlag}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}

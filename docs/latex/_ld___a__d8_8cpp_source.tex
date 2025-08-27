@@ -1,0 +1,33 @@
+\doxysection{Ld\+\_\+\+A\+\_\+d8.\+cpp}
+\hypertarget{_ld___a__d8_8cpp_source}{}\label{_ld___a__d8_8cpp_source}\index{LeoBoy.Core/src/Cpu/Instructions/Implementations/Ld/Ld\_A\_d8.cpp@{LeoBoy.Core/src/Cpu/Instructions/Implementations/Ld/Ld\_A\_d8.cpp}}
+\mbox{\hyperlink{_ld___a__d8_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_ld_8h}{Ld.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_opcodes_8h}{../../Opcodes.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_cpu}{Cpu}}}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_cpu_1_1_instructions}{Instructions}}}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations}{Implementations}}}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld}{Ld}}}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00013}\mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_acb4faf99955ba6fb6914ed617fc54c31}{00013}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_acb4faf99955ba6fb6914ed617fc54c31}{Ld\_A\_d8}}(\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstructionRegistrator}}\&\ registrator)}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registrator.\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator_a551514e0250033e37c256e97421aa4db}{Register}}(Opcodes::LD\_A\_d8,\ [](\mbox{\hyperlink{class_cpu_1_1_i_write_cpu}{Cpu::IWriteCpu}}\&\ cpu,\ \mbox{\hyperlink{class_memory_1_1_i_memory}{Memory::IMemory}}\&\ memory,\ \mbox{\hyperlink{class_logging_1_1_i_logger}{Logging::ILogger}}\&\ logger)}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ the\ immediate\ 8-\/bit\ value\ from\ the\ address\ pointed\ to\ by\ PC\ and\ increment\ PC}}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ value\ =\ memory.\mbox{\hyperlink{class_memory_1_1_i_memory_a44fa3cb6cd94769fbbb07b1e523255a7}{Read}}(cpu.\mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a4e9b3f1e8c34aedf02a7e66738e26127}{IncrementPc}}());}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Load\ the\ value\ into\ register\ A}}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpu.\mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a72daea1c762bddbea86c6fbe44380ca7}{SetA}}(value);}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ld___a__d8_8cpp_source_l00027}00027\ \}}
+
+\end{DoxyCode}

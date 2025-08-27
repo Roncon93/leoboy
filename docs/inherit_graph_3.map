@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_memory_1_1_i_memory.html" title="Represents the memory map of the Game Boy system." alt="" coords="5,5,133,32"/>
+<area shape="rect" id="Node000001" href="$class_memory_1_1_memory_impl.html" title=" " alt="" coords="181,5,329,32"/>
+<area shape="poly" id="edge6_Node000000_Node000001" title=" " alt="" coords="148,16,181,16,181,21,148,21"/>
+</map>

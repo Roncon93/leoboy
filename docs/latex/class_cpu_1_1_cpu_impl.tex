@@ -1,0 +1,1212 @@
+\doxysection{Cpu\+::Cpu\+Impl Class Reference}
+\hypertarget{class_cpu_1_1_cpu_impl}{}\label{class_cpu_1_1_cpu_impl}\index{Cpu::CpuImpl@{Cpu::CpuImpl}}
+
+
+{\ttfamily \#include $<$Cpu.\+hpp$>$}
+
+
+
+Inheritance diagram for Cpu\+::Cpu\+Impl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_cpu_1_1_cpu_impl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Cpu\+::Cpu\+Impl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_cpu_1_1_cpu_impl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cpu_1_1_cpu_impl_a721487035eefb8a9450232e2530279a2}{Cpu\+Impl}} (\mbox{\hyperlink{class_memory_1_1_i_memory}{Memory\+::\+IMemory}} \&memory, \mbox{\hyperlink{class_logging_1_1_i_logger}{Logging\+::\+ILogger}} \&logger, \mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_look_up}{Instructions\+::\+IInstruction\+Look\+Up}} \&instructions)
+\begin{DoxyCompactList}\small\item\em Initializes all registers to zero. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_cpu_impl_afc5e347a0bc2eb1da466dc662b10dfef}{Fetch}} () override
+\begin{DoxyCompactList}\small\item\em Fetches the next opcode from memory and increments PC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a31320f8262da0e85e60b0dd19deef5a7}{Execute}} (uint8\+\_\+t opcode)
+\begin{DoxyCompactList}\small\item\em Decodes and executes a single CPU instruction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_abfb5a78becb97b0d36a3851e8eca5606}{Step}} () override
+\begin{DoxyCompactList}\small\item\em Runs one CPU instruction cycle\+: fetch, decode, and execute. \end{DoxyCompactList}\item 
+const uint16\+\_\+t \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a9ba04b76933907e1b413633966987b22}{Get\+Pc}} () override
+\begin{DoxyCompactList}\small\item\em Gets the current value of the Program Counter (PC). \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a0480606890040c6a641cce55ee445855}{Increment\+Pc}} () override
+\begin{DoxyCompactList}\small\item\em Retrieves the current program counter (PC) value and increments it by 1. \end{DoxyCompactList}\item 
+const uint16\+\_\+t \mbox{\hyperlink{class_cpu_1_1_cpu_impl_ad78cf61e177cccb4c626614105cf79f7}{Get\+AF}} () override
+\begin{DoxyCompactList}\small\item\em Gets the combined 16-\/bit AF register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_ade57924622b83f3ac77808d4d0cb30a8}{Set\+AF}} (uint16\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Sets the combined 16-\/bit AF register. \end{DoxyCompactList}\item 
+const uint16\+\_\+t \mbox{\hyperlink{class_cpu_1_1_cpu_impl_abcc32a53acfe22ba24f096160be2e564}{Get\+BC}} () override
+\begin{DoxyCompactList}\small\item\em Gets the combined 16-\/bit BC register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a8eafd6f102602368f9c9d60bec53315c}{Set\+BC}} (uint16\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Sets the combined 16-\/bit BC register. \end{DoxyCompactList}\item 
+const uint16\+\_\+t \mbox{\hyperlink{class_cpu_1_1_cpu_impl_aaaaceb043b9f363208d427524cb71470}{Get\+DE}} () override
+\begin{DoxyCompactList}\small\item\em Gets the combined 16-\/bit DE register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a48980f187f2dde864affa6a7987377f1}{Set\+DE}} (uint16\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Sets the combined 16-\/bit DE register. \end{DoxyCompactList}\item 
+const uint16\+\_\+t \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a9c16f27554f45fdeb1b1351d9413c3b0}{Get\+HL}} () override
+\begin{DoxyCompactList}\small\item\em Gets the combined 16-\/bit HL register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a8d5d7e50ea1e318a2798c0b3a46080f1}{Set\+HL}} (uint16\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Sets the combined 16-\/bit HL register. \end{DoxyCompactList}\item 
+const uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a71199e3a5b7307816ff2ad80016581ec}{GetA}} () override
+\begin{DoxyCompactList}\small\item\em Gets the value of the accumulator register (A). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a83a16f0c374b24afbeb8e1aa26d4cde1}{SetA}} (uint8\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Sets the value of the accumulator register (A). \end{DoxyCompactList}\item 
+const uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a2424ca2d9dca6ba55427bfebce88f4cd}{GetF}} () override
+\begin{DoxyCompactList}\small\item\em Gets the value of the flags register (F). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_afbe529057127db84cb620b2f430404f0}{SetF}} (uint8\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Sets the value of the flags register (F). \end{DoxyCompactList}\item 
+const uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a5dca4c686f9968914c21c863652ff8ed}{GetB}} () override
+\begin{DoxyCompactList}\small\item\em Gets the value of the B register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a4c3213cafb92b4bfe4c089816154ddf0}{SetB}} (uint8\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Sets the value of the B register. \end{DoxyCompactList}\item 
+const uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a761db6f494032f2d1d02cb7f0498363e}{GetC}} () override
+\begin{DoxyCompactList}\small\item\em Gets the value of the C register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a7ff91f62d721c92f8463a811e78722c1}{SetC}} (uint8\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Sets the value of the C register. \end{DoxyCompactList}\item 
+const uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a69e6e13c69250aef10eae9ad514763b9}{GetD}} () override
+\begin{DoxyCompactList}\small\item\em Gets the value of the D register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a789b8e0f60584d3e74c95681e9cef8ed}{SetD}} (uint8\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Sets the value of the D register. \end{DoxyCompactList}\item 
+const uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_cpu_impl_acb72b03917deb08b325dd463e5a4ba3f}{GetE}} () override
+\begin{DoxyCompactList}\small\item\em Gets the value of the E register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_adf500a11bb2f2fa5d621f8117e16a4dd}{SetE}} (uint8\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Sets the value of the E register. \end{DoxyCompactList}\item 
+const uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_cpu_impl_aadee5a4c5ae3e5b42a4e10e16b07bd0c}{GetH}} () override
+\begin{DoxyCompactList}\small\item\em Gets the value of the H register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a11651adbe8804e00dd018e7a8dced7d8}{SetH}} (uint8\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Sets the value of the H register. \end{DoxyCompactList}\item 
+const uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_cpu_impl_ac6c3ebfab55acd343bdf064d50ed5318}{GetL}} () override
+\begin{DoxyCompactList}\small\item\em Gets the value of the L register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_ab89e8948b31739d6ae0a6981339faef5}{SetL}} (uint8\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Sets the value of the L register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a8ad91567a49d99b681cf8d386a5229e8}{Set\+Zero\+Flag}} (bool is\+Set) override
+\begin{DoxyCompactList}\small\item\em Sets or clears the zero flag in the F register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_aa32bcfbaecd1e84bf9241498bb486e62}{Set\+Subtract\+Flag}} (bool is\+Set) override
+\begin{DoxyCompactList}\small\item\em Sets or clears the substract flag in the F register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_ad6ede74f268019a9c54ecc2ff7cdc3e8}{Set\+Half\+Carry\+Flag}} (bool is\+Set) override
+\begin{DoxyCompactList}\small\item\em Sets or clears the half-\/carry flag in the F register. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a518a080b997062774363c0dc5eb3de19}{Set\+Carry\+Flag}} (bool is\+Set) override
+\begin{DoxyCompactList}\small\item\em Sets or clears the carry flag in the F register. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{class_cpu_1_1_cpu_impl_aedc4d38d5281e2c293db4824ce833245}{Get\+Zero\+Flag}} () override
+\begin{DoxyCompactList}\small\item\em Gets the value of the zero flag (bit 7) of the F register. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a786f62061a0f7c76a1a77a06f1cf6626}{Get\+Subtract\+Flag}} () override
+\begin{DoxyCompactList}\small\item\em Gets the value of the subtract flag (bit 6) of the F register. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{class_cpu_1_1_cpu_impl_ad08d473e3662baae453f68496bfd1efd}{Get\+Half\+Carry\+Flag}} () override
+\begin{DoxyCompactList}\small\item\em Gets the value of the half-\/carry flag (bit 5) of the F register. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{class_cpu_1_1_cpu_impl_ad5347e627ebf3f6e5e1922d4c30cb1e1}{Get\+Carry\+Flag}} () override
+\begin{DoxyCompactList}\small\item\em Gets the value of the carry flag (bit 4) of the F register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cpu_1_1_i_write_cpu}{Cpu\+::\+IWrite\+Cpu}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a5546d032c29cc11320239c3274252e81}{\texorpdfstring{$\sim$}{\string~}\+IWrite\+Cpu}} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cpu_1_1_i_cpu}{Cpu\+::\+ICpu}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_cpu_1_1_i_cpu_a47bcdfab1ff75f5df06c0d2c96f3b63d}{\texorpdfstring{$\sim$}{\string~}\+ICpu}} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_cpu_1_1_i_cpu}{Cpu\+::\+ICpu}}}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr uint16\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_a0733ea575565d3c8613b0809e9d7bdab}{Initial\+Pc}} = 0x0100
+\begin{DoxyCompactList}\small\item\em Program Counter initialized to 0x0100, where the BIOS ends. \end{DoxyCompactList}\item 
+static constexpr uint16\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_a706170774b4655050216107ad48301a7}{Initial\+Sp}} = 0x\+FFFE
+\begin{DoxyCompactList}\small\item\em Stack Pointer initialized to 0x\+FFFE, pointing to the top of the memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00014}{14}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_cpu_1_1_cpu_impl_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cpu_1_1_cpu_impl_a721487035eefb8a9450232e2530279a2}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!CpuImpl@{CpuImpl}}
+\index{CpuImpl@{CpuImpl}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{CpuImpl()}{CpuImpl()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a721487035eefb8a9450232e2530279a2} 
+Cpu\+::\+Cpu\+Impl\+::\+Cpu\+Impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_memory_1_1_i_memory}{Memory\+::\+IMemory}} \&}]{memory}{, }\item[{\mbox{\hyperlink{class_logging_1_1_i_logger}{Logging\+::\+ILogger}} \&}]{logger}{, }\item[{\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_look_up}{Instructions\+::\+IInstruction\+Look\+Up}} \&}]{instructions}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes all registers to zero. 
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ :\ memory(memory),\ logger(logger),\ instructions(instructions),\ pc(\mbox{\hyperlink{class_cpu_1_1_i_cpu_a0733ea575565d3c8613b0809e9d7bdab}{InitialPc}}),\ sp(\mbox{\hyperlink{class_cpu_1_1_i_cpu_a706170774b4655050216107ad48301a7}{InitialSp}}),}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ a(0),\ f(0),\ b(0),\ c(0),\ d(0),\ e(0),\ h(0),\ l(0) }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_cpu_1_1_cpu_impl_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cpu_1_1_cpu_impl_a31320f8262da0e85e60b0dd19deef5a7}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!Execute@{Execute}}
+\index{Execute@{Execute}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a31320f8262da0e85e60b0dd19deef5a7} 
+void Cpu\+::\+Cpu\+Impl\+::\+Execute (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{opcode}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Decodes and executes a single CPU instruction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opcode} & The opcode byte fetched from memory.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_a5475ea6f41e87d8a005d7a4bac43c7f0}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00031}{31}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_cpu_1_1_instructions_a6f00eb9307c77fe0ff6e63f654189eed}{Instructions::Instruction}}\ instruction\ =\ instructions.Get(opcode);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ instruction(*\textcolor{keyword}{this},\ memory,\ logger);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_afc5e347a0bc2eb1da466dc662b10dfef}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!Fetch@{Fetch}}
+\index{Fetch@{Fetch}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{Fetch()}{Fetch()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_afc5e347a0bc2eb1da466dc662b10dfef} 
+uint8\+\_\+t Cpu\+::\+Cpu\+Impl\+::\+Fetch (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fetches the next opcode from memory and increments PC. 
+
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_abce415beebef25f9e1b02c31ed799209}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00026}{26}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ memory.Read(pc++);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a71199e3a5b7307816ff2ad80016581ec}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetA@{GetA}}
+\index{GetA@{GetA}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetA()}{GetA()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a71199e3a5b7307816ff2ad80016581ec} 
+const uint8\+\_\+t Cpu\+::\+Cpu\+Impl\+::\+GetA (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the value of the accumulator register (A). 
+
+\texorpdfstring{$<$}{<}/ \begin{DoxyReturn}{Returns}
+The value of the A register.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_ab761eaadaece1fe265cf47beb646a455}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00093}{93}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ a;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_ad78cf61e177cccb4c626614105cf79f7}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetAF@{GetAF}}
+\index{GetAF@{GetAF}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetAF()}{GetAF()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_ad78cf61e177cccb4c626614105cf79f7} 
+const uint16\+\_\+t Cpu\+::\+Cpu\+Impl\+::\+Get\+AF (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the combined 16-\/bit AF register. 
+
+\begin{DoxyReturn}{Returns}
+The 16-\/bit AF register value.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_adf4b77ca557a794fb028664656c0bba8}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00052}{52}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetCombinedRegister(a,\ f);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a5dca4c686f9968914c21c863652ff8ed}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetB@{GetB}}
+\index{GetB@{GetB}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetB()}{GetB()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a5dca4c686f9968914c21c863652ff8ed} 
+const uint8\+\_\+t Cpu\+::\+Cpu\+Impl\+::\+GetB (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the value of the B register. 
+
+The value of the B register.
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_abefe97bacccbdda7c997cf3b8c86e597}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00113}{113}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ b;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_abcc32a53acfe22ba24f096160be2e564}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetBC@{GetBC}}
+\index{GetBC@{GetBC}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetBC()}{GetBC()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_abcc32a53acfe22ba24f096160be2e564} 
+const uint16\+\_\+t Cpu\+::\+Cpu\+Impl\+::\+Get\+BC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the combined 16-\/bit BC register. 
+
+\begin{DoxyReturn}{Returns}
+The 16-\/bit BC register value.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_af85e917719e6dfed72ce0bfbeba3a26c}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00063}{63}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetCombinedRegister(b,\ c);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a761db6f494032f2d1d02cb7f0498363e}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetC@{GetC}}
+\index{GetC@{GetC}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetC()}{GetC()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a761db6f494032f2d1d02cb7f0498363e} 
+const uint8\+\_\+t Cpu\+::\+Cpu\+Impl\+::\+GetC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the value of the C register. 
+
+The value of the C register.
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_a57f70180ba8987e418a63f96ddcc2248}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00123}{123}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_ad5347e627ebf3f6e5e1922d4c30cb1e1}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetCarryFlag@{GetCarryFlag}}
+\index{GetCarryFlag@{GetCarryFlag}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetCarryFlag()}{GetCarryFlag()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_ad5347e627ebf3f6e5e1922d4c30cb1e1} 
+const bool Cpu\+::\+Cpu\+Impl\+::\+Get\+Carry\+Flag (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the value of the carry flag (bit 4) of the F register. 
+
+\begin{DoxyReturn}{Returns}
+True if the carry flag is set; otherwise, false.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_ad5abf593e5ee7694ff26759324526a71}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00208}{208}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (f\ \&\ FlagCarry)\ !=\ 0;}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a69e6e13c69250aef10eae9ad514763b9}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetD@{GetD}}
+\index{GetD@{GetD}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetD()}{GetD()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a69e6e13c69250aef10eae9ad514763b9} 
+const uint8\+\_\+t Cpu\+::\+Cpu\+Impl\+::\+GetD (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the value of the D register. 
+
+The value of the D register.
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_acaf68ceecf4447acf1aa6d3eb94fa2b6}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00133}{133}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ d;}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_aaaaceb043b9f363208d427524cb71470}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetDE@{GetDE}}
+\index{GetDE@{GetDE}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetDE()}{GetDE()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_aaaaceb043b9f363208d427524cb71470} 
+const uint16\+\_\+t Cpu\+::\+Cpu\+Impl\+::\+Get\+DE (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the combined 16-\/bit DE register. 
+
+\begin{DoxyReturn}{Returns}
+The 16-\/bit DE register value.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_aff337a17b5cfaff1d00dca54fe485cbd}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00073}{73}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetCombinedRegister(d,\ e);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_acb72b03917deb08b325dd463e5a4ba3f}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetE@{GetE}}
+\index{GetE@{GetE}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetE()}{GetE()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_acb72b03917deb08b325dd463e5a4ba3f} 
+const uint8\+\_\+t Cpu\+::\+Cpu\+Impl\+::\+GetE (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the value of the E register. 
+
+The value of the E register.
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_af8f9e9dd9d7730ef6920f2a26d4df149}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00143}{143}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ e;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a2424ca2d9dca6ba55427bfebce88f4cd}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetF@{GetF}}
+\index{GetF@{GetF}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetF()}{GetF()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a2424ca2d9dca6ba55427bfebce88f4cd} 
+const uint8\+\_\+t Cpu\+::\+Cpu\+Impl\+::\+GetF (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the value of the flags register (F). 
+
+\begin{DoxyReturn}{Returns}
+The value of the F register.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_ab98506f78487e5ad05fe2693951ddca1}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00103}{103}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ f;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_aadee5a4c5ae3e5b42a4e10e16b07bd0c}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetH@{GetH}}
+\index{GetH@{GetH}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetH()}{GetH()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_aadee5a4c5ae3e5b42a4e10e16b07bd0c} 
+const uint8\+\_\+t Cpu\+::\+Cpu\+Impl\+::\+GetH (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the value of the H register. 
+
+The value of the H register.
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_a2734b5dbdf4cb1802ef4e7a59e175b34}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00153}{153}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ h;}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_ad08d473e3662baae453f68496bfd1efd}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetHalfCarryFlag@{GetHalfCarryFlag}}
+\index{GetHalfCarryFlag@{GetHalfCarryFlag}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetHalfCarryFlag()}{GetHalfCarryFlag()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_ad08d473e3662baae453f68496bfd1efd} 
+const bool Cpu\+::\+Cpu\+Impl\+::\+Get\+Half\+Carry\+Flag (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the value of the half-\/carry flag (bit 5) of the F register. 
+
+\begin{DoxyReturn}{Returns}
+True if the half-\/carry flag is set; otherwise, false.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_a4567879e4d89bfcc4f56f3a1fa98f205}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00203}{203}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (f\ \&\ FlagHalfCarry)\ !=\ 0;}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a9c16f27554f45fdeb1b1351d9413c3b0}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetHL@{GetHL}}
+\index{GetHL@{GetHL}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetHL()}{GetHL()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a9c16f27554f45fdeb1b1351d9413c3b0} 
+const uint16\+\_\+t Cpu\+::\+Cpu\+Impl\+::\+Get\+HL (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the combined 16-\/bit HL register. 
+
+\begin{DoxyReturn}{Returns}
+The 16-\/bit HL register value.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_a03b93db786173cc5f22fd63a9bb5b322}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00083}{83}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetCombinedRegister(h,\ l);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_ac6c3ebfab55acd343bdf064d50ed5318}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetL@{GetL}}
+\index{GetL@{GetL}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetL()}{GetL()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_ac6c3ebfab55acd343bdf064d50ed5318} 
+const uint8\+\_\+t Cpu\+::\+Cpu\+Impl\+::\+GetL (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the value of the L register. 
+
+The value of the L register.
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_a5c196565ebc70a555bb6966e8665989f}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00163}{163}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ l;}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a9ba04b76933907e1b413633966987b22}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetPc@{GetPc}}
+\index{GetPc@{GetPc}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetPc()}{GetPc()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a9ba04b76933907e1b413633966987b22} 
+const uint16\+\_\+t Cpu\+::\+Cpu\+Impl\+::\+Get\+Pc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the current value of the Program Counter (PC). 
+
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_a5229e3c865dfa2831afc404ec0c083b6}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00042}{42}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pc;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a786f62061a0f7c76a1a77a06f1cf6626}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetSubtractFlag@{GetSubtractFlag}}
+\index{GetSubtractFlag@{GetSubtractFlag}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetSubtractFlag()}{GetSubtractFlag()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a786f62061a0f7c76a1a77a06f1cf6626} 
+const bool Cpu\+::\+Cpu\+Impl\+::\+Get\+Subtract\+Flag (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the value of the subtract flag (bit 6) of the F register. 
+
+\begin{DoxyReturn}{Returns}
+True if the subtract flag is set; otherwise, false.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_ad80bc93a3771e2fe25f293ef5c060d42}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00198}{198}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (f\ \&\ FlagSubtract)\ !=\ 0;}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_aedc4d38d5281e2c293db4824ce833245}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!GetZeroFlag@{GetZeroFlag}}
+\index{GetZeroFlag@{GetZeroFlag}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{GetZeroFlag()}{GetZeroFlag()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_aedc4d38d5281e2c293db4824ce833245} 
+const bool Cpu\+::\+Cpu\+Impl\+::\+Get\+Zero\+Flag (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the value of the zero flag (bit 7) of the F register. 
+
+\begin{DoxyReturn}{Returns}
+True if the zero flag is set; otherwise, false.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_a8bf1e83277fa7636c6e76bc6b79e6214}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00193}{193}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (f\ \&\ FlagZero)\ !=\ 0;}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a0480606890040c6a641cce55ee445855}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!IncrementPc@{IncrementPc}}
+\index{IncrementPc@{IncrementPc}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{IncrementPc()}{IncrementPc()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a0480606890040c6a641cce55ee445855} 
+uint16\+\_\+t Cpu\+::\+Cpu\+Impl\+::\+Increment\+Pc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the current program counter (PC) value and increments it by 1. 
+
+\begin{DoxyReturn}{Returns}
+The current value of the program counter before it is incremented.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a4e9b3f1e8c34aedf02a7e66738e26127}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00047}{47}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pc++;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a83a16f0c374b24afbeb8e1aa26d4cde1}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!SetA@{SetA}}
+\index{SetA@{SetA}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{SetA()}{SetA()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a83a16f0c374b24afbeb8e1aa26d4cde1} 
+void Cpu\+::\+Cpu\+Impl\+::\+SetA (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the value of the accumulator register (A). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 8-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a72daea1c762bddbea86c6fbe44380ca7}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00098}{98}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ a\ =\ value;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_ade57924622b83f3ac77808d4d0cb30a8}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!SetAF@{SetAF}}
+\index{SetAF@{SetAF}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{SetAF()}{SetAF()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_ade57924622b83f3ac77808d4d0cb30a8} 
+void Cpu\+::\+Cpu\+Impl\+::\+Set\+AF (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the combined 16-\/bit AF register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 16-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a92d2cc17760c569fc9a379c5f03e1452}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00057}{57}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ SetCombinedRegister(value,\ a,\ f);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cpu_1_1_cpu_impl_afbe529057127db84cb620b2f430404f0}{SetF}}(f);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a4c3213cafb92b4bfe4c089816154ddf0}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!SetB@{SetB}}
+\index{SetB@{SetB}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{SetB()}{SetB()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a4c3213cafb92b4bfe4c089816154ddf0} 
+void Cpu\+::\+Cpu\+Impl\+::\+SetB (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the value of the B register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 8-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a1a2ab222d1c35448db5dc3d932989af1}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00118}{118}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ b\ =\ value;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a8eafd6f102602368f9c9d60bec53315c}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!SetBC@{SetBC}}
+\index{SetBC@{SetBC}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{SetBC()}{SetBC()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a8eafd6f102602368f9c9d60bec53315c} 
+void Cpu\+::\+Cpu\+Impl\+::\+Set\+BC (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the combined 16-\/bit BC register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 16-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a79005840d3b3396c267926626849f792}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00068}{68}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ SetCombinedRegister(value,\ b,\ c);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a7ff91f62d721c92f8463a811e78722c1}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!SetC@{SetC}}
+\index{SetC@{SetC}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{SetC()}{SetC()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a7ff91f62d721c92f8463a811e78722c1} 
+void Cpu\+::\+Cpu\+Impl\+::\+SetC (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the value of the C register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 8-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_ad7301bb13d02bc9838cefc8268014689}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00128}{128}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ c\ =\ value;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a518a080b997062774363c0dc5eb3de19}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!SetCarryFlag@{SetCarryFlag}}
+\index{SetCarryFlag@{SetCarryFlag}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{SetCarryFlag()}{SetCarryFlag()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a518a080b997062774363c0dc5eb3de19} 
+void Cpu\+::\+Cpu\+Impl\+::\+Set\+Carry\+Flag (\begin{DoxyParamCaption}\item[{bool}]{is\+Set}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets or clears the carry flag in the F register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Set} & True to set the flag, false to clear it.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a9473f883350279bcf25f2075b1b56050}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00188}{188}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ SetFlag(FlagCarry,\ isSet);}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a789b8e0f60584d3e74c95681e9cef8ed}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!SetD@{SetD}}
+\index{SetD@{SetD}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{SetD()}{SetD()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a789b8e0f60584d3e74c95681e9cef8ed} 
+void Cpu\+::\+Cpu\+Impl\+::\+SetD (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the value of the D register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 8-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a830aaa4ddb198035dbad8c134eb52286}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00138}{138}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ d\ =\ value;}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a48980f187f2dde864affa6a7987377f1}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!SetDE@{SetDE}}
+\index{SetDE@{SetDE}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{SetDE()}{SetDE()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a48980f187f2dde864affa6a7987377f1} 
+void Cpu\+::\+Cpu\+Impl\+::\+Set\+DE (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the combined 16-\/bit DE register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 16-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a09325e641c7f236d5849899c258ba001}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00078}{78}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ SetCombinedRegister(value,\ d,\ e);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_adf500a11bb2f2fa5d621f8117e16a4dd}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!SetE@{SetE}}
+\index{SetE@{SetE}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{SetE()}{SetE()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_adf500a11bb2f2fa5d621f8117e16a4dd} 
+void Cpu\+::\+Cpu\+Impl\+::\+SetE (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the value of the E register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 8-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a9e41d574239560a152d1463853665515}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00148}{148}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ e\ =\ value;}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_afbe529057127db84cb620b2f430404f0}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!SetF@{SetF}}
+\index{SetF@{SetF}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{SetF()}{SetF()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_afbe529057127db84cb620b2f430404f0} 
+void Cpu\+::\+Cpu\+Impl\+::\+SetF (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the value of the flags register (F). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 8-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_ac47b86dec90968c8b8f8de3e132395bc}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00108}{108}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ f\ =\ value\ \&\ 0xF0;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a11651adbe8804e00dd018e7a8dced7d8}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!SetH@{SetH}}
+\index{SetH@{SetH}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{SetH()}{SetH()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a11651adbe8804e00dd018e7a8dced7d8} 
+void Cpu\+::\+Cpu\+Impl\+::\+SetH (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the value of the H register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 8-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_aae849c8c2a9d033cd7557cdb081211e5}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00158}{158}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ h\ =\ value;}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_ad6ede74f268019a9c54ecc2ff7cdc3e8}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!SetHalfCarryFlag@{SetHalfCarryFlag}}
+\index{SetHalfCarryFlag@{SetHalfCarryFlag}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{SetHalfCarryFlag()}{SetHalfCarryFlag()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_ad6ede74f268019a9c54ecc2ff7cdc3e8} 
+void Cpu\+::\+Cpu\+Impl\+::\+Set\+Half\+Carry\+Flag (\begin{DoxyParamCaption}\item[{bool}]{is\+Set}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets or clears the half-\/carry flag in the F register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Set} & True to set the flag, false to clear it.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a961bf4a67d2ebc847b19be7a10c69c6f}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00183}{183}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ SetFlag(FlagHalfCarry,\ isSet);}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a8d5d7e50ea1e318a2798c0b3a46080f1}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!SetHL@{SetHL}}
+\index{SetHL@{SetHL}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{SetHL()}{SetHL()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a8d5d7e50ea1e318a2798c0b3a46080f1} 
+void Cpu\+::\+Cpu\+Impl\+::\+Set\+HL (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the combined 16-\/bit HL register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 16-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_afb0b7e9cc4a1aaea002046d14642a5bb}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00088}{88}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ SetCombinedRegister(value,\ h,\ l);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_ab89e8948b31739d6ae0a6981339faef5}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!SetL@{SetL}}
+\index{SetL@{SetL}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{SetL()}{SetL()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_ab89e8948b31739d6ae0a6981339faef5} 
+void Cpu\+::\+Cpu\+Impl\+::\+SetL (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the value of the L register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 8-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_ad364e4db27f99881d9b2068346f7b2e2}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00168}{168}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ l\ =\ value;}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_aa32bcfbaecd1e84bf9241498bb486e62}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!SetSubtractFlag@{SetSubtractFlag}}
+\index{SetSubtractFlag@{SetSubtractFlag}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{SetSubtractFlag()}{SetSubtractFlag()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_aa32bcfbaecd1e84bf9241498bb486e62} 
+void Cpu\+::\+Cpu\+Impl\+::\+Set\+Subtract\+Flag (\begin{DoxyParamCaption}\item[{bool}]{is\+Set}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets or clears the substract flag in the F register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Set} & True to set the flag, false to clear it.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_ad235404fb4eac88cc3e1de26d3be39ed}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00178}{178}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ SetFlag(FlagSubtract,\ isSet);}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_a8ad91567a49d99b681cf8d386a5229e8}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!SetZeroFlag@{SetZeroFlag}}
+\index{SetZeroFlag@{SetZeroFlag}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{SetZeroFlag()}{SetZeroFlag()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_a8ad91567a49d99b681cf8d386a5229e8} 
+void Cpu\+::\+Cpu\+Impl\+::\+Set\+Zero\+Flag (\begin{DoxyParamCaption}\item[{bool}]{is\+Set}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets or clears the zero flag in the F register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Set} & True to set the flag, false to clear it.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a98134768d9dda5b6cb1e93787392e1a5}{Cpu\+::\+IWrite\+Cpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00173}{173}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ SetFlag(FlagZero,\ isSet);}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_cpu_1_1_cpu_impl_abfb5a78becb97b0d36a3851e8eca5606}\index{Cpu::CpuImpl@{Cpu::CpuImpl}!Step@{Step}}
+\index{Step@{Step}!Cpu::CpuImpl@{Cpu::CpuImpl}}
+\doxysubsubsection{\texorpdfstring{Step()}{Step()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_cpu_impl_abfb5a78becb97b0d36a3851e8eca5606} 
+void Cpu\+::\+Cpu\+Impl\+::\+Step (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Runs one CPU instruction cycle\+: fetch, decode, and execute. 
+
+
+
+Implements \mbox{\hyperlink{class_cpu_1_1_i_cpu_af7331acc812b6d98d4e4cf9c92a71f38}{Cpu\+::\+ICpu}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cpu_8hpp_source_l00037}{37}} of file \mbox{\hyperlink{_cpu_8hpp_source}{Cpu.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a31320f8262da0e85e60b0dd19deef5a7}{Execute}}(\mbox{\hyperlink{class_cpu_1_1_cpu_impl_afc5e347a0bc2eb1da466dc662b10dfef}{Fetch}}());}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Leo\+Boy.\+Core/src/\+Cpu/\mbox{\hyperlink{_cpu_8hpp}{Cpu.\+hpp}}\end{DoxyCompactItemize}

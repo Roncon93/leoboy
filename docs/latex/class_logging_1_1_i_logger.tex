@@ -1,0 +1,64 @@
+\doxysection{Logging\+::ILogger Class Reference}
+\hypertarget{class_logging_1_1_i_logger}{}\label{class_logging_1_1_i_logger}\index{Logging::ILogger@{Logging::ILogger}}
+
+
+Interface for logging messages with various severity levels.  
+
+
+
+
+{\ttfamily \#include $<$ILogger.\+h$>$}
+
+
+
+Inheritance diagram for Logging\+::ILogger\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{class_logging_1_1_i_logger__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_logging_1_1_i_logger_a16ba152627e274f262514c849980ffd1}{Log}} (int level, const std\+::string \&message) const
+\begin{DoxyCompactList}\small\item\em Logs a message with the specified severity level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for logging messages with various severity levels. 
+
+Definition at line \mbox{\hyperlink{_i_logger_8h_source_l00011}{11}} of file \mbox{\hyperlink{_i_logger_8h_source}{ILogger.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_logging_1_1_i_logger_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_logging_1_1_i_logger_a16ba152627e274f262514c849980ffd1}\index{Logging::ILogger@{Logging::ILogger}!Log@{Log}}
+\index{Log@{Log}!Logging::ILogger@{Logging::ILogger}}
+\doxysubsubsection{\texorpdfstring{Log()}{Log()}}
+{\footnotesize\ttfamily \label{class_logging_1_1_i_logger_a16ba152627e274f262514c849980ffd1} 
+virtual void Logging\+::\+ILogger\+::\+Log (\begin{DoxyParamCaption}\item[{int}]{level}{, }\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Logs a message with the specified severity level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The severity level of the log message.\\
+\hline
+{\em message} & The message to log.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_logging_1_1_console_logger_a2edd34ef3b4aecd96acf896d4b098fae}{Logging\+::\+Console\+Logger}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Leo\+Boy.\+Core/src/\+Logging/\mbox{\hyperlink{_i_logger_8h}{ILogger.\+h}}\end{DoxyCompactItemize}

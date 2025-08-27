@@ -1,0 +1,16 @@
+<map id="LeoBoy.Core/src/Cpu/Instructions/Implementations" name="LeoBoy.Core/src/Cpu/Instructions/Implementations">
+<area shape="rect" id="node2" href="dir_f799a548b59f83e10bb07302afda4846.html" title="Inc" alt="" coords="179,64,218,91"/>
+<area shape="rect" id="node3" href="dir_81f92dde67cdd5c3e77f1021a5d0189a.html" title="Ld" alt="" coords="242,64,281,91"/>
+<area shape="rect" id="node5" href="dir_f43d8684c0dc24991b4a2eac0c2cbbc9.html" title="Memory" alt="" coords="136,139,205,165"/>
+<area shape="poly" id="edge3" href="dir_000004_000007.html" alt="" coords="253,93,232,114,207,132,204,128,229,110,249,89"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000004_000007.html" title="3" alt="" coords="209,128,216,144"/>
+<area shape="rect" id="node6" href="dir_242aca7749606949d30c416c9430dddb.html" title="Utilities" alt="" coords="229,139,294,165"/>
+<area shape="poly" id="edge1" href="dir_000004_000010.html" alt="" coords="264,91,264,123,259,123,259,91"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000004_000010.html" title="2" alt="" coords="266,112,273,128"/>
+<area shape="rect" id="node7" href="dir_bd062ddab539ee215b612334b19ea53d.html" title="Logging" alt="" coords="318,139,384,165"/>
+<area shape="poly" id="edge2" href="dir_000004_000006.html" alt="" coords="273,89,294,110,318,128,315,132,290,114,270,93"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000004_000006.html" title="3" alt="" coords="315,113,322,129"/>
+<area shape="rect" id="node4" href="dir_cc6c75a9a9b9c3de6268990189a2c79e.html" title="Nop" alt="" coords="304,64,349,91"/>
+<area shape="rect" id="clust2" href="dir_83ab3f0cc8525e9136dc6ef5e5f2891c.html" alt="" coords="27,53,360,101"/>
+<area shape="rect" id="clust1" href="dir_954524115efd68c692280a88b5395c8b.html" title="Instructions" alt="" coords="16,16,371,112"/>
+</map>

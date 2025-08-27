@@ -1,0 +1,7 @@
+<map id="Cpu::IWriteCpu" name="Cpu::IWriteCpu">
+<area shape="rect" id="Node000001" title="Interface for CPU operations that modify the CPU state (registers, program counter,..." alt="" coords="5,80,117,107"/>
+<area shape="rect" id="Node000003" href="$class_cpu_1_1_cpu_impl.html" title=" " alt="" coords="10,155,112,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="64,122,64,154,58,154,58,122"/>
+<area shape="rect" id="Node000002" href="$class_cpu_1_1_i_cpu.html" title="Emulates the Game Boy CPU registers and basic operations." alt="" coords="20,5,102,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,48,64,80,58,80,58,48"/>
+</map>

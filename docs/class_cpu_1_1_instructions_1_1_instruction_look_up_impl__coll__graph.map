@@ -1,0 +1,7 @@
+<map id="Cpu::Instructions::InstructionLookUpImpl" name="Cpu::Instructions::InstructionLookUpImpl">
+<area shape="rect" id="Node000001" title="Concrete implementation of the instruction lookup and registration system." alt="" coords="77,96,230,139"/>
+<area shape="rect" id="Node000002" href="$class_cpu_1_1_instructions_1_1_i_instruction_look_up.html" title="Interface for looking up and executing CPU instructions based on opcodes." alt="" coords="5,5,137,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,58,137,94,133,98,99,61"/>
+<area shape="rect" id="Node000003" href="$class_cpu_1_1_instructions_1_1_i_instruction_registrator.html" title="Interface for registering CPU instructions with their corresponding opcodes." alt="" coords="161,5,312,48"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="209,61,175,98,171,94,205,58"/>
+</map>

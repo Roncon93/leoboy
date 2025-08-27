@@ -1,0 +1,21 @@
+<map id="LeoBoy.Core/src/Cpu/Instructions/IInstructionLookUp.h" name="LeoBoy.Core/src/Cpu/Instructions/IInstructionLookUp.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="120,5,282,64"/>
+<area shape="rect" id="Node000002" href="$_instruction_8h.html" title=" " alt="" coords="155,112,248,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,64,204,96,199,96,199,64"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,187,83,213"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="175,142,87,182,84,177,173,137"/>
+<area shape="rect" id="Node000004" href="$_i_write_cpu_8h.html" title=" " alt="" coords="106,187,208,213"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="196,141,175,175,171,172,191,138"/>
+<area shape="rect" id="Node000007" href="$_i_memory_8h.html" title=" " alt="" coords="167,261,324,288"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="208,138,223,186,240,246,235,247,217,187,203,140"/>
+<area shape="rect" id="Node000008" href="$_i_logger_8h.html" title=" " alt="" coords="287,187,436,213"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="230,137,321,177,319,182,228,142"/>
+<area shape="rect" id="Node000005" href="$_i_cpu_8h.html" title=" " alt="" coords="82,261,142,288"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="152,215,130,249,126,247,147,212"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="215,336,276,363"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="136,286,210,326,208,331,134,291"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="248,289,248,320,243,320,243,289"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="363,214,356,250,349,270,338,290,315,313,289,331,286,326,312,309,334,286,344,268,351,248,358,213"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="399,261,452,288"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="374,212,406,248,402,251,370,216"/>
+</map>

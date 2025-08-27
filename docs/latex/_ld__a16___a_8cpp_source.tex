@@ -1,0 +1,38 @@
+\doxysection{Ld\+\_\+a16\+\_\+\+A.\+cpp}
+\hypertarget{_ld__a16___a_8cpp_source}{}\label{_ld__a16___a_8cpp_source}\index{LeoBoy.Core/src/Cpu/Instructions/Implementations/Ld/Ld\_a16\_A.cpp@{LeoBoy.Core/src/Cpu/Instructions/Implementations/Ld/Ld\_a16\_A.cpp}}
+\mbox{\hyperlink{_ld__a16___a_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_ld_8h}{Ld.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_instruction_registrator_8h}{../../IInstructionRegistrator.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_opcodes_8h}{../../Opcodes.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_write_cpu_8h}{../../../IWriteCpu.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_memory_8h}{../../../../Memory/IMemory.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_logger_8h}{../../../../Logging/ILogger.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_bit_operations_8h}{../../../../Utilities/BitOperations.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00009}00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_cpu}{Cpu}}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_cpu_1_1_instructions}{Instructions}}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations}{Implementations}}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld}{Ld}}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00017}\mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_ae82a26169afd12ced9dda0d045d5cf82}{00017}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_ae82a26169afd12ced9dda0d045d5cf82}{Ld\_a16\_A}}(\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstructionRegistrator}}\&\ registrator)}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registrator.\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator_a551514e0250033e37c256e97421aa4db}{Register}}(Opcodes::LD\_a16\_A,\ [](\mbox{\hyperlink{class_cpu_1_1_i_write_cpu}{IWriteCpu}}\&\ cpu,\ \mbox{\hyperlink{class_memory_1_1_i_memory}{Memory::IMemory}}\&\ memory,\ \mbox{\hyperlink{class_logging_1_1_i_logger}{Logging::ILogger}}\&\ logger)}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ the\ next\ 2\ immediate\ 8-\/bit\ values\ from\ the\ address\ pointed\ to\ by\ PC}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ addressLowByte\ =\ memory.\mbox{\hyperlink{class_memory_1_1_i_memory_a44fa3cb6cd94769fbbb07b1e523255a7}{Read}}(cpu.\mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a4e9b3f1e8c34aedf02a7e66738e26127}{IncrementPc}}());}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ addressHighByte\ =\ memory.\mbox{\hyperlink{class_memory_1_1_i_memory_a44fa3cb6cd94769fbbb07b1e523255a7}{Read}}(cpu.\mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a4e9b3f1e8c34aedf02a7e66738e26127}{IncrementPc}}());}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Combine\ the\ two\ 8-\/bit\ values\ into\ a\ single\ 16-\/bit\ address\ and\ write\ the\ value\ of\ register\ A\ to\ that\ address}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ memory.\mbox{\hyperlink{class_memory_1_1_i_memory_af602f9c5a180f89c033597a065d1d785}{Write}}(\mbox{\hyperlink{namespace_utilities_1_1_bit_operations_adb3ac1c09d2e2cb66016c4a6ec695483}{Utilities::BitOperations::CombineBytes}}(addressHighByte,\ addressLowByte),\ cpu.\mbox{\hyperlink{class_cpu_1_1_i_cpu_ab761eaadaece1fe265cf47beb646a455}{GetA}}());}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ld__a16___a_8cpp_source_l00032}00032\ \}}
+
+\end{DoxyCode}

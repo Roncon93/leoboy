@@ -1,0 +1,81 @@
+\doxysection{Cpu\+::Instructions\+::IInstruction\+Registrator Class Reference}
+\hypertarget{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{}\label{class_cpu_1_1_instructions_1_1_i_instruction_registrator}\index{Cpu::Instructions::IInstructionRegistrator@{Cpu::Instructions::IInstructionRegistrator}}
+
+
+Interface for registering CPU instructions with their corresponding opcodes.  
+
+
+
+
+{\ttfamily \#include $<$IInstruction\+Registrator.\+h$>$}
+
+
+
+Inheritance diagram for Cpu\+::Instructions\+::IInstruction\+Registrator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{class_cpu_1_1_instructions_1_1_i_instruction_registrator__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator_ae5c2b5d98e3f51699c1f14edc73193e4}{\texorpdfstring{$\sim$}{\string~}\+IInstruction\+Registrator}} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator_a551514e0250033e37c256e97421aa4db}{Register}} (uint8\+\_\+t opcode, \mbox{\hyperlink{namespace_cpu_1_1_instructions_a6f00eb9307c77fe0ff6e63f654189eed}{Instruction}} instruction)=0
+\begin{DoxyCompactList}\small\item\em Registers an instruction implementation for the specified opcode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for registering CPU instructions with their corresponding opcodes. 
+
+Definition at line \mbox{\hyperlink{_i_instruction_registrator_8h_source_l00013}{13}} of file \mbox{\hyperlink{_i_instruction_registrator_8h_source}{IInstruction\+Registrator.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_cpu_1_1_instructions_1_1_i_instruction_registrator_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cpu_1_1_instructions_1_1_i_instruction_registrator_ae5c2b5d98e3f51699c1f14edc73193e4}\index{Cpu::Instructions::IInstructionRegistrator@{Cpu::Instructions::IInstructionRegistrator}!````~IInstructionRegistrator@{\texorpdfstring{$\sim$}{\string~}IInstructionRegistrator}}
+\index{````~IInstructionRegistrator@{\texorpdfstring{$\sim$}{\string~}IInstructionRegistrator}!Cpu::Instructions::IInstructionRegistrator@{Cpu::Instructions::IInstructionRegistrator}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IInstructionRegistrator()}{\string~IInstructionRegistrator()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_instructions_1_1_i_instruction_registrator_ae5c2b5d98e3f51699c1f14edc73193e4} 
+virtual Cpu\+::\+Instructions\+::\+IInstruction\+Registrator\+::\texorpdfstring{$\sim$}{\string~}\+IInstruction\+Registrator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Default virtual destructor. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_cpu_1_1_instructions_1_1_i_instruction_registrator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cpu_1_1_instructions_1_1_i_instruction_registrator_a551514e0250033e37c256e97421aa4db}\index{Cpu::Instructions::IInstructionRegistrator@{Cpu::Instructions::IInstructionRegistrator}!Register@{Register}}
+\index{Register@{Register}!Cpu::Instructions::IInstructionRegistrator@{Cpu::Instructions::IInstructionRegistrator}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_instructions_1_1_i_instruction_registrator_a551514e0250033e37c256e97421aa4db} 
+virtual void Cpu\+::\+Instructions\+::\+IInstruction\+Registrator\+::\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{opcode}{, }\item[{\mbox{\hyperlink{namespace_cpu_1_1_instructions_a6f00eb9307c77fe0ff6e63f654189eed}{Instruction}}}]{instruction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Registers an instruction implementation for the specified opcode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opcode} & The opcode of the instruction to register.\\
+\hline
+{\em instruction} & The instruction implementation to associate with the opcode.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_instructions_1_1_instruction_look_up_impl_a742c3364fae9f133a4ce702dd74a5b0c}{Cpu\+::\+Instructions\+::\+Instruction\+Look\+Up\+Impl}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Leo\+Boy.\+Core/src/\+Cpu/\+Instructions/\mbox{\hyperlink{_i_instruction_registrator_8h}{IInstruction\+Registrator.\+h}}\end{DoxyCompactItemize}

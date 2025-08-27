@@ -1,0 +1,61 @@
+\doxysection{Instruction\+Look\+Up.\+hpp}
+\hypertarget{_instruction_look_up_8hpp_source}{}\label{_instruction_look_up_8hpp_source}\index{LeoBoy.Core/src/Cpu/Instructions/InstructionLookUp.hpp@{LeoBoy.Core/src/Cpu/Instructions/InstructionLookUp.hpp}}
+\mbox{\hyperlink{_instruction_look_up_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_instruction_look_up_8h}{IInstructionLookUp.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_instruction_registrator_8h}{IInstructionRegistrator.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_instruction_8h}{Instruction.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_unimplemented_8h}{Implementations/Unimplemented.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_nop_8h}{Implementations/Nop/Nop.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_ld_8h}{Implementations/Ld/Ld.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_inc_8h}{Implementations/Inc/Inc.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00013}00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_cpu}{Cpu}}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_cpu_1_1_instructions}{Instructions}}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00025}\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_instruction_look_up_impl}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_instruction_look_up_impl_a234a69e20b3caa951e1ed7309cc422b5}{InstructionLookUpImpl}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_look_up}{Cpu::Instructions::IInstructionLookUp}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{Cpu::Instructions::IInstructionRegistrator}}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00031}\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_instruction_look_up_impl_a234a69e20b3caa951e1ed7309cc422b5}{00031}}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cpu_1_1_instructions_1_1_instruction_look_up_impl_a234a69e20b3caa951e1ed7309cc422b5}{InstructionLookUpImpl}}()}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialize\ all\ instructions\ to\ a\ default\ no-\/op\ to\ handle\ unimplemented\ opcodes\ gracefully}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint16\_t\ opcode\ =\ 0;\ opcode\ <\ 0x100;\ opcode++)}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_a9de35918cc63a4b0804ca17a6412cd81}{Implementations::Unimplemented}}(*\textcolor{keyword}{this},\ \textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}(opcode));}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ NOP}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_nop_a664f64cc4191f3af3b4a0d85ec3d6719}{Implementations::Nop::Nop}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ LD}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_acb4faf99955ba6fb6914ed617fc54c31}{Implementations::Ld::Ld\_A\_d8}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_af5b33edb2764e93d0b03b11471171ff1}{Implementations::Ld::Ld\_A\_HL}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_a516cff8dc8347e111efb138d22c35327}{Implementations::Ld::Ld\_HL\_A}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_adec07204341a80bfe2d96681446bd52b}{Implementations::Ld::Ld\_HL\_d16}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ INC}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_inc_aa06cf09d6db8a47ddec2cbfedbf176f6}{Implementations::Inc::Inc\_A}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00052}\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_instruction_look_up_impl_a742c3364fae9f133a4ce702dd74a5b0c}{00052}}\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cpu_1_1_instructions_1_1_instruction_look_up_impl_a742c3364fae9f133a4ce702dd74a5b0c}{Register}}(uint8\_t\ opcode,\ \mbox{\hyperlink{namespace_cpu_1_1_instructions_a6f00eb9307c77fe0ff6e63f654189eed}{Instruction}}\ instruction)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00053}00053\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ instructions[opcode]\ =\ instruction;}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00057}\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_instruction_look_up_impl_ad9bac1ccb4e8ca1c1209adfc25036d10}{00057}}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_cpu_1_1_instructions_a6f00eb9307c77fe0ff6e63f654189eed}{Instruction}}\ \mbox{\hyperlink{class_cpu_1_1_instructions_1_1_instruction_look_up_impl_ad9bac1ccb4e8ca1c1209adfc25036d10}{Get}}(uint8\_t\ opcode)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00058}00058\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instructions[opcode];}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ std::array<Instruction,\ 256>\ instructions;}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_instruction_look_up_8hpp_source_l00069}00069\ \}}
+
+\end{DoxyCode}

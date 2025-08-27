@@ -1,0 +1,49 @@
+\doxysection{Cpu\+::Instructions\+::Implementations Namespace Reference}
+\hypertarget{namespace_cpu_1_1_instructions_1_1_implementations}{}\label{namespace_cpu_1_1_instructions_1_1_implementations}\index{Cpu::Instructions::Implementations@{Cpu::Instructions::Implementations}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_inc}{Inc}}
+\item 
+namespace \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld}{Ld}}
+\item 
+namespace \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_nop}{Nop}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_a9de35918cc63a4b0804ca17a6412cd81}{Unimplemented}} (\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstruction\+Registrator}} \&registrator, uint8\+\_\+t opcode)
+\begin{DoxyCompactList}\small\item\em Implementation of an unimplemented instruction handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespace_cpu_1_1_instructions_1_1_implementations_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_cpu_1_1_instructions_1_1_implementations_a9de35918cc63a4b0804ca17a6412cd81}\index{Cpu::Instructions::Implementations@{Cpu::Instructions::Implementations}!Unimplemented@{Unimplemented}}
+\index{Unimplemented@{Unimplemented}!Cpu::Instructions::Implementations@{Cpu::Instructions::Implementations}}
+\doxysubsubsection{\texorpdfstring{Unimplemented()}{Unimplemented()}}
+{\footnotesize\ttfamily \label{namespace_cpu_1_1_instructions_1_1_implementations_a9de35918cc63a4b0804ca17a6412cd81} 
+void Cpu\+::\+Instructions\+::\+Implementations\+::\+Unimplemented (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstruction\+Registrator}} \&}]{registrator}{, }\item[{uint8\+\_\+t}]{opcode}{}\end{DoxyParamCaption})}
+
+
+
+Implementation of an unimplemented instruction handler. 
+
+This handler is used for opcodes that have not yet been implemented. When executed, it logs a message indicating the unimplemented opcode. 
+
+Definition at line \mbox{\hyperlink{_unimplemented_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_unimplemented_8cpp_source}{Unimplemented.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registrator.\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator_a551514e0250033e37c256e97421aa4db}{Register}}(opcode,\ [opcode](\mbox{\hyperlink{class_cpu_1_1_i_write_cpu}{Cpu::IWriteCpu}}\&\ cpu,\ \mbox{\hyperlink{class_memory_1_1_i_memory}{Memory::IMemory}}\&\ memory,\ \mbox{\hyperlink{class_logging_1_1_i_logger}{Logging::ILogger}}\&\ logger)}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Log\ unimplemented\ opcode\ usage}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ stream;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ \textcolor{stringliteral}{"{}Unimplemented\ opcode:\ 0x"{}}\ <<\ std::hex\ <<\ (int)opcode\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ logger.\mbox{\hyperlink{class_logging_1_1_i_logger_a16ba152627e274f262514c849980ffd1}{Log}}(1,\ stream.str());}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}

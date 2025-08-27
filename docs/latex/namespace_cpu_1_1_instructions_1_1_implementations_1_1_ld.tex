@@ -1,0 +1,191 @@
+\doxysection{Cpu\+::Instructions\+::Implementations\+::Ld Namespace Reference}
+\hypertarget{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld}{}\label{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld}\index{Cpu::Instructions::Implementations::Ld@{Cpu::Instructions::Implementations::Ld}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_acb4faf99955ba6fb6914ed617fc54c31}{Ld\+\_\+\+A\+\_\+d8}} (\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstruction\+Registrator}} \&registrator)
+\begin{DoxyCompactList}\small\item\em Implementation of the "{}\+LD A, d8"{} instruction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_af5b33edb2764e93d0b03b11471171ff1}{Ld\+\_\+\+A\+\_\+\+HL}} (\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstruction\+Registrator}} \&registrator)
+\begin{DoxyCompactList}\small\item\em Implementation of the "{}\+LD A, (\+HL)"{} instruction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_a516cff8dc8347e111efb138d22c35327}{Ld\+\_\+\+HL\+\_\+A}} (\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstruction\+Registrator}} \&registrator)
+\begin{DoxyCompactList}\small\item\em Implementation of the "{}\+LD (\+HL), A"{} instruction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_adec07204341a80bfe2d96681446bd52b}{Ld\+\_\+\+HL\+\_\+d16}} (\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstruction\+Registrator}} \&registrator)
+\begin{DoxyCompactList}\small\item\em Implementation of the "{}\+LD (\+HL), d16"{} instruction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_ae82a26169afd12ced9dda0d045d5cf82}{Ld\+\_\+a16\+\_\+A}} (\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstruction\+Registrator}} \&registrator)
+\begin{DoxyCompactList}\small\item\em Implementation of the "{}\+LD A, (a16)"{} instruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_ae82a26169afd12ced9dda0d045d5cf82}\index{Cpu::Instructions::Implementations::Ld@{Cpu::Instructions::Implementations::Ld}!Ld\_a16\_A@{Ld\_a16\_A}}
+\index{Ld\_a16\_A@{Ld\_a16\_A}!Cpu::Instructions::Implementations::Ld@{Cpu::Instructions::Implementations::Ld}}
+\doxysubsubsection{\texorpdfstring{Ld\_a16\_A()}{Ld\_a16\_A()}}
+{\footnotesize\ttfamily \label{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_ae82a26169afd12ced9dda0d045d5cf82} 
+void Cpu\+::\+Instructions\+::\+Implementations\+::\+Ld\+::\+Ld\+\_\+a16\+\_\+A (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstruction\+Registrator}} \&}]{registrator}{}\end{DoxyParamCaption})}
+
+
+
+Implementation of the "{}\+LD A, (a16)"{} instruction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em registrator} & The instruction registrator.\\
+\hline
+\end{DoxyParams}
+
+
+This instruction loads the value from the memory address specified by the 16-\/bit immediate value into register A. 
+
+Definition at line \mbox{\hyperlink{_ld__a16___a_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_ld__a16___a_8cpp_source}{Ld\+\_\+a16\+\_\+\+A.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registrator.\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator_a551514e0250033e37c256e97421aa4db}{Register}}(Opcodes::LD\_a16\_A,\ [](\mbox{\hyperlink{class_cpu_1_1_i_write_cpu}{IWriteCpu}}\&\ cpu,\ \mbox{\hyperlink{class_memory_1_1_i_memory}{Memory::IMemory}}\&\ memory,\ \mbox{\hyperlink{class_logging_1_1_i_logger}{Logging::ILogger}}\&\ logger)}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ the\ next\ 2\ immediate\ 8-\/bit\ values\ from\ the\ address\ pointed\ to\ by\ PC}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ addressLowByte\ =\ memory.\mbox{\hyperlink{class_memory_1_1_i_memory_a44fa3cb6cd94769fbbb07b1e523255a7}{Read}}(cpu.\mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a4e9b3f1e8c34aedf02a7e66738e26127}{IncrementPc}}());}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ addressHighByte\ =\ memory.\mbox{\hyperlink{class_memory_1_1_i_memory_a44fa3cb6cd94769fbbb07b1e523255a7}{Read}}(cpu.\mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a4e9b3f1e8c34aedf02a7e66738e26127}{IncrementPc}}());}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Combine\ the\ two\ 8-\/bit\ values\ into\ a\ single\ 16-\/bit\ address\ and\ write\ the\ value\ of\ register\ A\ to\ that\ address}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ memory.\mbox{\hyperlink{class_memory_1_1_i_memory_af602f9c5a180f89c033597a065d1d785}{Write}}(\mbox{\hyperlink{namespace_utilities_1_1_bit_operations_adb3ac1c09d2e2cb66016c4a6ec695483}{Utilities::BitOperations::CombineBytes}}(addressHighByte,\ addressLowByte),\ cpu.\mbox{\hyperlink{class_cpu_1_1_i_cpu_ab761eaadaece1fe265cf47beb646a455}{GetA}}());}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_acb4faf99955ba6fb6914ed617fc54c31}\index{Cpu::Instructions::Implementations::Ld@{Cpu::Instructions::Implementations::Ld}!Ld\_A\_d8@{Ld\_A\_d8}}
+\index{Ld\_A\_d8@{Ld\_A\_d8}!Cpu::Instructions::Implementations::Ld@{Cpu::Instructions::Implementations::Ld}}
+\doxysubsubsection{\texorpdfstring{Ld\_A\_d8()}{Ld\_A\_d8()}}
+{\footnotesize\ttfamily \label{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_acb4faf99955ba6fb6914ed617fc54c31} 
+void Cpu\+::\+Instructions\+::\+Implementations\+::\+Ld\+::\+Ld\+\_\+\+A\+\_\+d8 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstruction\+Registrator}} \&}]{registrator}{}\end{DoxyParamCaption})}
+
+
+
+Implementation of the "{}\+LD A, d8"{} instruction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em registrator} & The instruction registrator.\\
+\hline
+\end{DoxyParams}
+
+
+This instruction loads an immediate 8-\/bit value into the accumulator register A. It is represented by the opcode 0x3E. 
+
+Definition at line \mbox{\hyperlink{_ld___a__d8_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_ld___a__d8_8cpp_source}{Ld\+\_\+\+A\+\_\+d8.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registrator.\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator_a551514e0250033e37c256e97421aa4db}{Register}}(Opcodes::LD\_A\_d8,\ [](\mbox{\hyperlink{class_cpu_1_1_i_write_cpu}{Cpu::IWriteCpu}}\&\ cpu,\ \mbox{\hyperlink{class_memory_1_1_i_memory}{Memory::IMemory}}\&\ memory,\ \mbox{\hyperlink{class_logging_1_1_i_logger}{Logging::ILogger}}\&\ logger)}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ the\ immediate\ 8-\/bit\ value\ from\ the\ address\ pointed\ to\ by\ PC\ and\ increment\ PC}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ value\ =\ memory.\mbox{\hyperlink{class_memory_1_1_i_memory_a44fa3cb6cd94769fbbb07b1e523255a7}{Read}}(cpu.\mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a4e9b3f1e8c34aedf02a7e66738e26127}{IncrementPc}}());}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Load\ the\ value\ into\ register\ A}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpu.\mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a72daea1c762bddbea86c6fbe44380ca7}{SetA}}(value);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_af5b33edb2764e93d0b03b11471171ff1}\index{Cpu::Instructions::Implementations::Ld@{Cpu::Instructions::Implementations::Ld}!Ld\_A\_HL@{Ld\_A\_HL}}
+\index{Ld\_A\_HL@{Ld\_A\_HL}!Cpu::Instructions::Implementations::Ld@{Cpu::Instructions::Implementations::Ld}}
+\doxysubsubsection{\texorpdfstring{Ld\_A\_HL()}{Ld\_A\_HL()}}
+{\footnotesize\ttfamily \label{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_af5b33edb2764e93d0b03b11471171ff1} 
+void Cpu\+::\+Instructions\+::\+Implementations\+::\+Ld\+::\+Ld\+\_\+\+A\+\_\+\+HL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstruction\+Registrator}} \&}]{registrator}{}\end{DoxyParamCaption})}
+
+
+
+Implementation of the "{}\+LD A, (\+HL)"{} instruction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em registrator} & The instruction registrator.\\
+\hline
+\end{DoxyParams}
+
+
+This instruction loads the value from the memory address pointed to by the HL register pair into register A. 
+
+Definition at line \mbox{\hyperlink{_ld___a___h_l_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_ld___a___h_l_8cpp_source}{Ld\+\_\+\+A\+\_\+\+HL.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registrator.\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator_a551514e0250033e37c256e97421aa4db}{Register}}(Opcodes::LD\_A\_HL,\ [](\mbox{\hyperlink{class_cpu_1_1_i_write_cpu}{IWriteCpu}}\&\ cpu,\ \mbox{\hyperlink{class_memory_1_1_i_memory}{Memory::IMemory}}\&\ memory,\ \mbox{\hyperlink{class_logging_1_1_i_logger}{Logging::ILogger}}\&\ logger)}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ address\ =\ cpu.\mbox{\hyperlink{class_cpu_1_1_i_cpu_a03b93db786173cc5f22fd63a9bb5b322}{GetHL}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpu.\mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a72daea1c762bddbea86c6fbe44380ca7}{SetA}}(memory.\mbox{\hyperlink{class_memory_1_1_i_memory_a44fa3cb6cd94769fbbb07b1e523255a7}{Read}}(address));}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_a516cff8dc8347e111efb138d22c35327}\index{Cpu::Instructions::Implementations::Ld@{Cpu::Instructions::Implementations::Ld}!Ld\_HL\_A@{Ld\_HL\_A}}
+\index{Ld\_HL\_A@{Ld\_HL\_A}!Cpu::Instructions::Implementations::Ld@{Cpu::Instructions::Implementations::Ld}}
+\doxysubsubsection{\texorpdfstring{Ld\_HL\_A()}{Ld\_HL\_A()}}
+{\footnotesize\ttfamily \label{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_a516cff8dc8347e111efb138d22c35327} 
+void Cpu\+::\+Instructions\+::\+Implementations\+::\+Ld\+::\+Ld\+\_\+\+HL\+\_\+A (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstruction\+Registrator}} \&}]{registrator}{}\end{DoxyParamCaption})}
+
+
+
+Implementation of the "{}\+LD (\+HL), A"{} instruction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em registrator} & The instruction registrator.\\
+\hline
+\end{DoxyParams}
+
+
+This instruction stores the value from register A into the memory address pointed to by the HL register pair. 
+
+Definition at line \mbox{\hyperlink{_ld___h_l___a_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_ld___h_l___a_8cpp_source}{Ld\+\_\+\+HL\+\_\+\+A.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registrator.\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator_a551514e0250033e37c256e97421aa4db}{Register}}(Opcodes::LD\_HL\_A,\ [](\mbox{\hyperlink{class_cpu_1_1_i_write_cpu}{IWriteCpu}}\&\ cpu,\ \mbox{\hyperlink{class_memory_1_1_i_memory}{Memory::IMemory}}\&\ memory,\ \mbox{\hyperlink{class_logging_1_1_i_logger}{Logging::ILogger}}\&\ logger)}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ address\ =\ cpu.\mbox{\hyperlink{class_cpu_1_1_i_cpu_a03b93db786173cc5f22fd63a9bb5b322}{GetHL}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ memory.\mbox{\hyperlink{class_memory_1_1_i_memory_af602f9c5a180f89c033597a065d1d785}{Write}}(address,\ cpu.\mbox{\hyperlink{class_cpu_1_1_i_cpu_ab761eaadaece1fe265cf47beb646a455}{GetA}}());}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_adec07204341a80bfe2d96681446bd52b}\index{Cpu::Instructions::Implementations::Ld@{Cpu::Instructions::Implementations::Ld}!Ld\_HL\_d16@{Ld\_HL\_d16}}
+\index{Ld\_HL\_d16@{Ld\_HL\_d16}!Cpu::Instructions::Implementations::Ld@{Cpu::Instructions::Implementations::Ld}}
+\doxysubsubsection{\texorpdfstring{Ld\_HL\_d16()}{Ld\_HL\_d16()}}
+{\footnotesize\ttfamily \label{namespace_cpu_1_1_instructions_1_1_implementations_1_1_ld_adec07204341a80bfe2d96681446bd52b} 
+void Cpu\+::\+Instructions\+::\+Implementations\+::\+Ld\+::\+Ld\+\_\+\+HL\+\_\+d16 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstruction\+Registrator}} \&}]{registrator}{}\end{DoxyParamCaption})}
+
+
+
+Implementation of the "{}\+LD (\+HL), d16"{} instruction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em registrator} & The instruction registrator.\\
+\hline
+\end{DoxyParams}
+
+
+This instruction stores the value stored in a memory address into the combined HL registry. 
+
+Definition at line \mbox{\hyperlink{_ld___h_l__d16_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_ld___h_l__d16_8cpp_source}{Ld\+\_\+\+HL\+\_\+d16.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registrator.\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator_a551514e0250033e37c256e97421aa4db}{Register}}(Opcodes::LD\_HL\_d16,\ [](\mbox{\hyperlink{class_cpu_1_1_i_write_cpu}{Cpu::IWriteCpu}}\&\ cpu,\ \mbox{\hyperlink{class_memory_1_1_i_memory}{Memory::IMemory}}\&\ memory,\ \mbox{\hyperlink{class_logging_1_1_i_logger}{Logging::ILogger}}\&\ logger)}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ the\ next\ 2\ immediate\ 8-\/bit\ values\ from\ the\ address\ pointed\ to\ by\ PC}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ addressLowByte\ =\ memory.\mbox{\hyperlink{class_memory_1_1_i_memory_a44fa3cb6cd94769fbbb07b1e523255a7}{Read}}(cpu.\mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a4e9b3f1e8c34aedf02a7e66738e26127}{IncrementPc}}());}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ addressHighByte\ =\ memory.\mbox{\hyperlink{class_memory_1_1_i_memory_a44fa3cb6cd94769fbbb07b1e523255a7}{Read}}(cpu.\mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a4e9b3f1e8c34aedf02a7e66738e26127}{IncrementPc}}());}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ HL\ now\ points\ to\ the\ new\ address\ specified\ by\ the\ instruction's\ operands}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cpu.\mbox{\hyperlink{class_cpu_1_1_i_write_cpu_afb0b7e9cc4a1aaea002046d14642a5bb}{SetHL}}(\mbox{\hyperlink{namespace_utilities_1_1_bit_operations_adb3ac1c09d2e2cb66016c4a6ec695483}{Utilities::BitOperations::CombineBytes}}(addressHighByte,\ addressLowByte));}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}

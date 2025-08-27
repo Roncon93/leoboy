@@ -1,0 +1,19 @@
+<map id="LeoBoy.Core/src/Cpu/Instructions/Instruction.h" name="LeoBoy.Core/src/Cpu/Instructions/Instruction.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="117,5,286,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,83,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,51,83,91,81,86,160,46"/>
+<area shape="rect" id="Node000003" href="$_i_write_cpu_8h.html" title=" " alt="" coords="106,96,208,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,50,174,83,169,81,188,47"/>
+<area shape="rect" id="Node000006" href="$_i_memory_8h.html" title=" " alt="" coords="167,171,324,197"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="210,47,240,155,235,156,205,49"/>
+<area shape="rect" id="Node000007" href="$_i_logger_8h.html" title=" " alt="" coords="287,96,436,123"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="244,46,324,86,321,91,241,51"/>
+<area shape="rect" id="Node000004" href="$_i_cpu_8h.html" title=" " alt="" coords="82,171,142,197"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="152,125,130,159,126,156,147,122"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="215,245,276,272"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="136,196,210,235,208,240,134,200"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="248,198,248,230,243,230,243,198"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="363,124,356,159,349,180,338,199,315,222,289,240,286,235,312,218,334,196,344,178,351,158,358,123"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="399,171,452,197"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="374,121,406,157,402,161,370,125"/>
+</map>

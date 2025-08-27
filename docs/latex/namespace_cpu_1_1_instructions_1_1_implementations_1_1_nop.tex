@@ -1,0 +1,36 @@
+\doxysection{Cpu\+::Instructions\+::Implementations\+::Nop Namespace Reference}
+\hypertarget{namespace_cpu_1_1_instructions_1_1_implementations_1_1_nop}{}\label{namespace_cpu_1_1_instructions_1_1_implementations_1_1_nop}\index{Cpu::Instructions::Implementations::Nop@{Cpu::Instructions::Implementations::Nop}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespace_cpu_1_1_instructions_1_1_implementations_1_1_nop_a664f64cc4191f3af3b4a0d85ec3d6719}{Nop}} (\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstruction\+Registrator}} \&registrator)
+\begin{DoxyCompactList}\small\item\em Implementation of the NOP (No Operation) instruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespace_cpu_1_1_instructions_1_1_implementations_1_1_nop_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_cpu_1_1_instructions_1_1_implementations_1_1_nop_a664f64cc4191f3af3b4a0d85ec3d6719}\index{Cpu::Instructions::Implementations::Nop@{Cpu::Instructions::Implementations::Nop}!Nop@{Nop}}
+\index{Nop@{Nop}!Cpu::Instructions::Implementations::Nop@{Cpu::Instructions::Implementations::Nop}}
+\doxysubsubsection{\texorpdfstring{Nop()}{Nop()}}
+{\footnotesize\ttfamily \label{namespace_cpu_1_1_instructions_1_1_implementations_1_1_nop_a664f64cc4191f3af3b4a0d85ec3d6719} 
+void Cpu\+::\+Instructions\+::\+Implementations\+::\+Nop\+::\+Nop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator}{IInstruction\+Registrator}} \&}]{registrator}{}\end{DoxyParamCaption})}
+
+
+
+Implementation of the NOP (No Operation) instruction. 
+
+The NOP instruction does nothing and is often used for timing adjustments. It does not affect any CPU registers or flags. 
+
+Definition at line \mbox{\hyperlink{_nop_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_nop_8cpp_source}{Nop.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ registrator.\mbox{\hyperlink{class_cpu_1_1_instructions_1_1_i_instruction_registrator_a551514e0250033e37c256e97421aa4db}{Register}}(Opcodes::NOP,\ [](\mbox{\hyperlink{class_cpu_1_1_i_write_cpu}{Cpu::IWriteCpu}}\&\ cpu,\ \mbox{\hyperlink{class_memory_1_1_i_memory}{Memory::IMemory}}\&\ memory,\ \mbox{\hyperlink{class_logging_1_1_i_logger}{Logging::ILogger}}\&\ logger)}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ NOP\ does\ nothing}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}

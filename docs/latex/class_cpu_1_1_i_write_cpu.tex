@@ -1,0 +1,476 @@
+\doxysection{Cpu\+::IWrite\+Cpu Class Reference}
+\hypertarget{class_cpu_1_1_i_write_cpu}{}\label{class_cpu_1_1_i_write_cpu}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+
+
+Interface for CPU operations that modify the CPU state (registers, program counter, etc).  
+
+
+
+
+{\ttfamily \#include $<$IWrite\+Cpu.\+h$>$}
+
+
+
+Inheritance diagram for Cpu\+::IWrite\+Cpu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_cpu_1_1_i_write_cpu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Cpu\+::IWrite\+Cpu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_cpu_1_1_i_write_cpu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a5546d032c29cc11320239c3274252e81}{\texorpdfstring{$\sim$}{\string~}\+IWrite\+Cpu}} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\item 
+virtual uint16\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a4e9b3f1e8c34aedf02a7e66738e26127}{Increment\+Pc}} ()=0
+\begin{DoxyCompactList}\small\item\em Retrieves the current program counter (PC) value and increments it by 1. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a92d2cc17760c569fc9a379c5f03e1452}{Set\+AF}} (uint16\+\_\+t value)=0
+\begin{DoxyCompactList}\small\item\em Sets the combined 16-\/bit AF register. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a79005840d3b3396c267926626849f792}{Set\+BC}} (uint16\+\_\+t value)=0
+\begin{DoxyCompactList}\small\item\em Sets the combined 16-\/bit BC register. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a09325e641c7f236d5849899c258ba001}{Set\+DE}} (uint16\+\_\+t value)=0
+\begin{DoxyCompactList}\small\item\em Sets the combined 16-\/bit DE register. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_afb0b7e9cc4a1aaea002046d14642a5bb}{Set\+HL}} (uint16\+\_\+t value)=0
+\begin{DoxyCompactList}\small\item\em Sets the combined 16-\/bit HL register. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a72daea1c762bddbea86c6fbe44380ca7}{SetA}} (uint8\+\_\+t value)=0
+\begin{DoxyCompactList}\small\item\em Sets the value of the accumulator register (A). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_ac47b86dec90968c8b8f8de3e132395bc}{SetF}} (uint8\+\_\+t value)=0
+\begin{DoxyCompactList}\small\item\em Sets the value of the flags register (F). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a1a2ab222d1c35448db5dc3d932989af1}{SetB}} (uint8\+\_\+t value)=0
+\begin{DoxyCompactList}\small\item\em Sets the value of the B register. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_ad7301bb13d02bc9838cefc8268014689}{SetC}} (uint8\+\_\+t value)=0
+\begin{DoxyCompactList}\small\item\em Sets the value of the C register. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a830aaa4ddb198035dbad8c134eb52286}{SetD}} (uint8\+\_\+t value)=0
+\begin{DoxyCompactList}\small\item\em Sets the value of the D register. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a9e41d574239560a152d1463853665515}{SetE}} (uint8\+\_\+t value)=0
+\begin{DoxyCompactList}\small\item\em Sets the value of the E register. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_aae849c8c2a9d033cd7557cdb081211e5}{SetH}} (uint8\+\_\+t value)=0
+\begin{DoxyCompactList}\small\item\em Sets the value of the H register. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_ad364e4db27f99881d9b2068346f7b2e2}{SetL}} (uint8\+\_\+t value)=0
+\begin{DoxyCompactList}\small\item\em Sets the value of the L register. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a98134768d9dda5b6cb1e93787392e1a5}{Set\+Zero\+Flag}} (bool is\+Set)=0
+\begin{DoxyCompactList}\small\item\em Sets or clears the zero flag in the F register. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_ad235404fb4eac88cc3e1de26d3be39ed}{Set\+Subtract\+Flag}} (bool is\+Set)=0
+\begin{DoxyCompactList}\small\item\em Sets or clears the substract flag in the F register. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a961bf4a67d2ebc847b19be7a10c69c6f}{Set\+Half\+Carry\+Flag}} (bool is\+Set)=0
+\begin{DoxyCompactList}\small\item\em Sets or clears the half-\/carry flag in the F register. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_write_cpu_a9473f883350279bcf25f2075b1b56050}{Set\+Carry\+Flag}} (bool is\+Set)=0
+\begin{DoxyCompactList}\small\item\em Sets or clears the carry flag in the F register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cpu_1_1_i_cpu}{Cpu\+::\+ICpu}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_cpu_1_1_i_cpu_a47bcdfab1ff75f5df06c0d2c96f3b63d}{\texorpdfstring{$\sim$}{\string~}\+ICpu}} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\item 
+virtual uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_abce415beebef25f9e1b02c31ed799209}{Fetch}} ()=0
+\begin{DoxyCompactList}\small\item\em Fetches the next opcode from memory and increments PC. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_cpu_a5475ea6f41e87d8a005d7a4bac43c7f0}{Execute}} (uint8\+\_\+t opcode)=0
+\begin{DoxyCompactList}\small\item\em Decodes and executes a single CPU instruction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cpu_1_1_i_cpu_af7331acc812b6d98d4e4cf9c92a71f38}{Step}} ()=0
+\begin{DoxyCompactList}\small\item\em Runs one CPU instruction cycle\+: fetch, decode, and execute. \end{DoxyCompactList}\item 
+virtual const uint16\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_a5229e3c865dfa2831afc404ec0c083b6}{Get\+Pc}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the current value of the Program Counter (PC). \end{DoxyCompactList}\item 
+virtual const uint16\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_adf4b77ca557a794fb028664656c0bba8}{Get\+AF}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the combined 16-\/bit AF register. \end{DoxyCompactList}\item 
+virtual const uint16\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_af85e917719e6dfed72ce0bfbeba3a26c}{Get\+BC}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the combined 16-\/bit BC register. \end{DoxyCompactList}\item 
+virtual const uint16\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_aff337a17b5cfaff1d00dca54fe485cbd}{Get\+DE}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the combined 16-\/bit DE register. \end{DoxyCompactList}\item 
+virtual const uint16\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_a03b93db786173cc5f22fd63a9bb5b322}{Get\+HL}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the combined 16-\/bit HL register. \end{DoxyCompactList}\item 
+virtual const uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_ab761eaadaece1fe265cf47beb646a455}{GetA}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the value of the accumulator register (A). \end{DoxyCompactList}\item 
+virtual const uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_ab98506f78487e5ad05fe2693951ddca1}{GetF}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the value of the flags register (F). \end{DoxyCompactList}\item 
+virtual const uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_abefe97bacccbdda7c997cf3b8c86e597}{GetB}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the value of the B register. \end{DoxyCompactList}\item 
+virtual const uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_a57f70180ba8987e418a63f96ddcc2248}{GetC}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the value of the C register. \end{DoxyCompactList}\item 
+virtual const uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_acaf68ceecf4447acf1aa6d3eb94fa2b6}{GetD}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the value of the D register. \end{DoxyCompactList}\item 
+virtual const uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_af8f9e9dd9d7730ef6920f2a26d4df149}{GetE}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the value of the E register. \end{DoxyCompactList}\item 
+virtual const uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_a2734b5dbdf4cb1802ef4e7a59e175b34}{GetH}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the value of the H register. \end{DoxyCompactList}\item 
+virtual const uint8\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_a5c196565ebc70a555bb6966e8665989f}{GetL}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the value of the L register. \end{DoxyCompactList}\item 
+virtual const bool \mbox{\hyperlink{class_cpu_1_1_i_cpu_a8bf1e83277fa7636c6e76bc6b79e6214}{Get\+Zero\+Flag}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the value of the zero flag (bit 7) of the F register. \end{DoxyCompactList}\item 
+virtual const bool \mbox{\hyperlink{class_cpu_1_1_i_cpu_ad80bc93a3771e2fe25f293ef5c060d42}{Get\+Subtract\+Flag}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the value of the subtract flag (bit 6) of the F register. \end{DoxyCompactList}\item 
+virtual const bool \mbox{\hyperlink{class_cpu_1_1_i_cpu_a4567879e4d89bfcc4f56f3a1fa98f205}{Get\+Half\+Carry\+Flag}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the value of the half-\/carry flag (bit 5) of the F register. \end{DoxyCompactList}\item 
+virtual const bool \mbox{\hyperlink{class_cpu_1_1_i_cpu_ad5abf593e5ee7694ff26759324526a71}{Get\+Carry\+Flag}} ()=0
+\begin{DoxyCompactList}\small\item\em Gets the value of the carry flag (bit 4) of the F register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_cpu_1_1_i_cpu}{Cpu\+::\+ICpu}}}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr uint16\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_a0733ea575565d3c8613b0809e9d7bdab}{Initial\+Pc}} = 0x0100
+\begin{DoxyCompactList}\small\item\em Program Counter initialized to 0x0100, where the BIOS ends. \end{DoxyCompactList}\item 
+static constexpr uint16\+\_\+t \mbox{\hyperlink{class_cpu_1_1_i_cpu_a706170774b4655050216107ad48301a7}{Initial\+Sp}} = 0x\+FFFE
+\begin{DoxyCompactList}\small\item\em Stack Pointer initialized to 0x\+FFFE, pointing to the top of the memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for CPU operations that modify the CPU state (registers, program counter, etc). 
+
+Definition at line \mbox{\hyperlink{_i_write_cpu_8h_source_l00010}{10}} of file \mbox{\hyperlink{_i_write_cpu_8h_source}{IWrite\+Cpu.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_cpu_1_1_i_write_cpu_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cpu_1_1_i_write_cpu_a5546d032c29cc11320239c3274252e81}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!````~IWriteCpu@{\texorpdfstring{$\sim$}{\string~}IWriteCpu}}
+\index{````~IWriteCpu@{\texorpdfstring{$\sim$}{\string~}IWriteCpu}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IWriteCpu()}{\string~IWriteCpu()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_a5546d032c29cc11320239c3274252e81} 
+virtual Cpu\+::\+IWrite\+Cpu\+::\texorpdfstring{$\sim$}{\string~}\+IWrite\+Cpu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Default virtual destructor. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_cpu_1_1_i_write_cpu_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cpu_1_1_i_write_cpu_a4e9b3f1e8c34aedf02a7e66738e26127}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!IncrementPc@{IncrementPc}}
+\index{IncrementPc@{IncrementPc}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{IncrementPc()}{IncrementPc()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_a4e9b3f1e8c34aedf02a7e66738e26127} 
+virtual uint16\+\_\+t Cpu\+::\+IWrite\+Cpu\+::\+Increment\+Pc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieves the current program counter (PC) value and increments it by 1. 
+
+\begin{DoxyReturn}{Returns}
+The current value of the program counter before it is incremented.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a0480606890040c6a641cce55ee445855}{Cpu\+::\+Cpu\+Impl}}.
+
+\Hypertarget{class_cpu_1_1_i_write_cpu_a72daea1c762bddbea86c6fbe44380ca7}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!SetA@{SetA}}
+\index{SetA@{SetA}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{SetA()}{SetA()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_a72daea1c762bddbea86c6fbe44380ca7} 
+virtual void Cpu\+::\+IWrite\+Cpu\+::\+SetA (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the value of the accumulator register (A). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 8-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a83a16f0c374b24afbeb8e1aa26d4cde1}{Cpu\+::\+Cpu\+Impl}}.
+
+\Hypertarget{class_cpu_1_1_i_write_cpu_a92d2cc17760c569fc9a379c5f03e1452}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!SetAF@{SetAF}}
+\index{SetAF@{SetAF}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{SetAF()}{SetAF()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_a92d2cc17760c569fc9a379c5f03e1452} 
+virtual void Cpu\+::\+IWrite\+Cpu\+::\+Set\+AF (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the combined 16-\/bit AF register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 16-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_ade57924622b83f3ac77808d4d0cb30a8}{Cpu\+::\+Cpu\+Impl}}.
+
+\Hypertarget{class_cpu_1_1_i_write_cpu_a1a2ab222d1c35448db5dc3d932989af1}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!SetB@{SetB}}
+\index{SetB@{SetB}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{SetB()}{SetB()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_a1a2ab222d1c35448db5dc3d932989af1} 
+virtual void Cpu\+::\+IWrite\+Cpu\+::\+SetB (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the value of the B register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 8-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a4c3213cafb92b4bfe4c089816154ddf0}{Cpu\+::\+Cpu\+Impl}}.
+
+\Hypertarget{class_cpu_1_1_i_write_cpu_a79005840d3b3396c267926626849f792}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!SetBC@{SetBC}}
+\index{SetBC@{SetBC}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{SetBC()}{SetBC()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_a79005840d3b3396c267926626849f792} 
+virtual void Cpu\+::\+IWrite\+Cpu\+::\+Set\+BC (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the combined 16-\/bit BC register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 16-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a8eafd6f102602368f9c9d60bec53315c}{Cpu\+::\+Cpu\+Impl}}.
+
+\Hypertarget{class_cpu_1_1_i_write_cpu_ad7301bb13d02bc9838cefc8268014689}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!SetC@{SetC}}
+\index{SetC@{SetC}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{SetC()}{SetC()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_ad7301bb13d02bc9838cefc8268014689} 
+virtual void Cpu\+::\+IWrite\+Cpu\+::\+SetC (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the value of the C register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 8-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a7ff91f62d721c92f8463a811e78722c1}{Cpu\+::\+Cpu\+Impl}}.
+
+\Hypertarget{class_cpu_1_1_i_write_cpu_a9473f883350279bcf25f2075b1b56050}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!SetCarryFlag@{SetCarryFlag}}
+\index{SetCarryFlag@{SetCarryFlag}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{SetCarryFlag()}{SetCarryFlag()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_a9473f883350279bcf25f2075b1b56050} 
+virtual void Cpu\+::\+IWrite\+Cpu\+::\+Set\+Carry\+Flag (\begin{DoxyParamCaption}\item[{bool}]{is\+Set}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets or clears the carry flag in the F register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Set} & True to set the flag, false to clear it.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a518a080b997062774363c0dc5eb3de19}{Cpu\+::\+Cpu\+Impl}}.
+
+\Hypertarget{class_cpu_1_1_i_write_cpu_a830aaa4ddb198035dbad8c134eb52286}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!SetD@{SetD}}
+\index{SetD@{SetD}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{SetD()}{SetD()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_a830aaa4ddb198035dbad8c134eb52286} 
+virtual void Cpu\+::\+IWrite\+Cpu\+::\+SetD (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the value of the D register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 8-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a789b8e0f60584d3e74c95681e9cef8ed}{Cpu\+::\+Cpu\+Impl}}.
+
+\Hypertarget{class_cpu_1_1_i_write_cpu_a09325e641c7f236d5849899c258ba001}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!SetDE@{SetDE}}
+\index{SetDE@{SetDE}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{SetDE()}{SetDE()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_a09325e641c7f236d5849899c258ba001} 
+virtual void Cpu\+::\+IWrite\+Cpu\+::\+Set\+DE (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the combined 16-\/bit DE register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 16-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a48980f187f2dde864affa6a7987377f1}{Cpu\+::\+Cpu\+Impl}}.
+
+\Hypertarget{class_cpu_1_1_i_write_cpu_a9e41d574239560a152d1463853665515}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!SetE@{SetE}}
+\index{SetE@{SetE}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{SetE()}{SetE()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_a9e41d574239560a152d1463853665515} 
+virtual void Cpu\+::\+IWrite\+Cpu\+::\+SetE (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the value of the E register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 8-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_adf500a11bb2f2fa5d621f8117e16a4dd}{Cpu\+::\+Cpu\+Impl}}.
+
+\Hypertarget{class_cpu_1_1_i_write_cpu_ac47b86dec90968c8b8f8de3e132395bc}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!SetF@{SetF}}
+\index{SetF@{SetF}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{SetF()}{SetF()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_ac47b86dec90968c8b8f8de3e132395bc} 
+virtual void Cpu\+::\+IWrite\+Cpu\+::\+SetF (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the value of the flags register (F). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 8-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_afbe529057127db84cb620b2f430404f0}{Cpu\+::\+Cpu\+Impl}}.
+
+\Hypertarget{class_cpu_1_1_i_write_cpu_aae849c8c2a9d033cd7557cdb081211e5}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!SetH@{SetH}}
+\index{SetH@{SetH}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{SetH()}{SetH()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_aae849c8c2a9d033cd7557cdb081211e5} 
+virtual void Cpu\+::\+IWrite\+Cpu\+::\+SetH (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the value of the H register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 8-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a11651adbe8804e00dd018e7a8dced7d8}{Cpu\+::\+Cpu\+Impl}}.
+
+\Hypertarget{class_cpu_1_1_i_write_cpu_a961bf4a67d2ebc847b19be7a10c69c6f}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!SetHalfCarryFlag@{SetHalfCarryFlag}}
+\index{SetHalfCarryFlag@{SetHalfCarryFlag}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{SetHalfCarryFlag()}{SetHalfCarryFlag()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_a961bf4a67d2ebc847b19be7a10c69c6f} 
+virtual void Cpu\+::\+IWrite\+Cpu\+::\+Set\+Half\+Carry\+Flag (\begin{DoxyParamCaption}\item[{bool}]{is\+Set}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets or clears the half-\/carry flag in the F register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Set} & True to set the flag, false to clear it.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_ad6ede74f268019a9c54ecc2ff7cdc3e8}{Cpu\+::\+Cpu\+Impl}}.
+
+\Hypertarget{class_cpu_1_1_i_write_cpu_afb0b7e9cc4a1aaea002046d14642a5bb}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!SetHL@{SetHL}}
+\index{SetHL@{SetHL}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{SetHL()}{SetHL()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_afb0b7e9cc4a1aaea002046d14642a5bb} 
+virtual void Cpu\+::\+IWrite\+Cpu\+::\+Set\+HL (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the combined 16-\/bit HL register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 16-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a8d5d7e50ea1e318a2798c0b3a46080f1}{Cpu\+::\+Cpu\+Impl}}.
+
+\Hypertarget{class_cpu_1_1_i_write_cpu_ad364e4db27f99881d9b2068346f7b2e2}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!SetL@{SetL}}
+\index{SetL@{SetL}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{SetL()}{SetL()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_ad364e4db27f99881d9b2068346f7b2e2} 
+virtual void Cpu\+::\+IWrite\+Cpu\+::\+SetL (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the value of the L register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The 8-\/bit value to set.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_ab89e8948b31739d6ae0a6981339faef5}{Cpu\+::\+Cpu\+Impl}}.
+
+\Hypertarget{class_cpu_1_1_i_write_cpu_ad235404fb4eac88cc3e1de26d3be39ed}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!SetSubtractFlag@{SetSubtractFlag}}
+\index{SetSubtractFlag@{SetSubtractFlag}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{SetSubtractFlag()}{SetSubtractFlag()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_ad235404fb4eac88cc3e1de26d3be39ed} 
+virtual void Cpu\+::\+IWrite\+Cpu\+::\+Set\+Subtract\+Flag (\begin{DoxyParamCaption}\item[{bool}]{is\+Set}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets or clears the substract flag in the F register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Set} & True to set the flag, false to clear it.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_aa32bcfbaecd1e84bf9241498bb486e62}{Cpu\+::\+Cpu\+Impl}}.
+
+\Hypertarget{class_cpu_1_1_i_write_cpu_a98134768d9dda5b6cb1e93787392e1a5}\index{Cpu::IWriteCpu@{Cpu::IWriteCpu}!SetZeroFlag@{SetZeroFlag}}
+\index{SetZeroFlag@{SetZeroFlag}!Cpu::IWriteCpu@{Cpu::IWriteCpu}}
+\doxysubsubsection{\texorpdfstring{SetZeroFlag()}{SetZeroFlag()}}
+{\footnotesize\ttfamily \label{class_cpu_1_1_i_write_cpu_a98134768d9dda5b6cb1e93787392e1a5} 
+virtual void Cpu\+::\+IWrite\+Cpu\+::\+Set\+Zero\+Flag (\begin{DoxyParamCaption}\item[{bool}]{is\+Set}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets or clears the zero flag in the F register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Set} & True to set the flag, false to clear it.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cpu_1_1_cpu_impl_a8ad91567a49d99b681cf8d386a5229e8}{Cpu\+::\+Cpu\+Impl}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Leo\+Boy.\+Core/src/\+Cpu/\mbox{\hyperlink{_i_write_cpu_8h}{IWrite\+Cpu.\+h}}\end{DoxyCompactItemize}

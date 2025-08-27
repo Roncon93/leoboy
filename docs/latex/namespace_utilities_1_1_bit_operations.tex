@@ -1,0 +1,43 @@
+\doxysection{Utilities\+::Bit\+Operations Namespace Reference}
+\hypertarget{namespace_utilities_1_1_bit_operations}{}\label{namespace_utilities_1_1_bit_operations}\index{Utilities::BitOperations@{Utilities::BitOperations}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{namespace_utilities_1_1_bit_operations_adb3ac1c09d2e2cb66016c4a6ec695483}{Combine\+Bytes}} (uint8\+\_\+t high, uint8\+\_\+t low)
+\begin{DoxyCompactList}\small\item\em Combines two bytes (8-\/bit) into a word (16-\/bit). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespace_utilities_1_1_bit_operations_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_utilities_1_1_bit_operations_adb3ac1c09d2e2cb66016c4a6ec695483}\index{Utilities::BitOperations@{Utilities::BitOperations}!CombineBytes@{CombineBytes}}
+\index{CombineBytes@{CombineBytes}!Utilities::BitOperations@{Utilities::BitOperations}}
+\doxysubsubsection{\texorpdfstring{CombineBytes()}{CombineBytes()}}
+{\footnotesize\ttfamily \label{namespace_utilities_1_1_bit_operations_adb3ac1c09d2e2cb66016c4a6ec695483} 
+uint16\+\_\+t Utilities\+::\+Bit\+Operations\+::\+Combine\+Bytes (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{high}{, }\item[{uint8\+\_\+t}]{low}{}\end{DoxyParamCaption})}
+
+
+
+Combines two bytes (8-\/bit) into a word (16-\/bit). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em high} & The high byte (first 4 bits of the word from the left).\\
+\hline
+{\em low} & The low byte (first 4 bits of the word from the right).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_bit_operations_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_bit_operations_8cpp_source}{Bit\+Operations.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keyword}{static\_cast<}uint16\_t\textcolor{keyword}{>}(high)\ <<\ 8)\ |\ \textcolor{keyword}{static\_cast<}uint16\_t\textcolor{keyword}{>}(low);}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}

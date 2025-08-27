@@ -1,0 +1,172 @@
+\doxysection{Memory\+::Memory\+Impl Class Reference}
+\hypertarget{class_memory_1_1_memory_impl}{}\label{class_memory_1_1_memory_impl}\index{Memory::MemoryImpl@{Memory::MemoryImpl}}
+
+
+{\ttfamily \#include $<$Memory.\+hpp$>$}
+
+
+
+Inheritance diagram for Memory\+::Memory\+Impl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{class_memory_1_1_memory_impl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Memory\+::Memory\+Impl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{class_memory_1_1_memory_impl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_memory_1_1_memory_impl_afb9b5476fc233335b50a87cb067c2f70}{Memory\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Initializes all memory addresses to zero. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_memory_1_1_memory_impl_a25e788e307f6f6d3dfff7b6e6a0dce47}{Read}} (uint16\+\_\+t address) const override
+\begin{DoxyCompactList}\small\item\em Reads an 8-\/bit value from the specified address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_memory_1_1_memory_impl_af6f8e8782c9fa51acc727b014a1dac0f}{Write}} (uint16\+\_\+t address, uint8\+\_\+t value) override
+\begin{DoxyCompactList}\small\item\em Writes an 8-\/bit value to the specified 16-\/bit address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_memory_1_1_i_memory}{Memory\+::\+IMemory}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_memory_1_1_i_memory_a5ca6d318bb4e5884484437e17046cd81}{\texorpdfstring{$\sim$}{\string~}\+IMemory}} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{class_memory_1_1_memory_impl_a80cec429506734aacf319fa9fddcf73b}{Memory\+Size}} = 0x10000
+\begin{DoxyCompactList}\small\item\em Total size of the addressable memory space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_memory_8hpp_source_l00008}{8}} of file \mbox{\hyperlink{_memory_8hpp_source}{Memory.\+hpp}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_memory_1_1_memory_impl_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_memory_1_1_memory_impl_afb9b5476fc233335b50a87cb067c2f70}\index{Memory::MemoryImpl@{Memory::MemoryImpl}!MemoryImpl@{MemoryImpl}}
+\index{MemoryImpl@{MemoryImpl}!Memory::MemoryImpl@{Memory::MemoryImpl}}
+\doxysubsubsection{\texorpdfstring{MemoryImpl()}{MemoryImpl()}}
+{\footnotesize\ttfamily \label{class_memory_1_1_memory_impl_afb9b5476fc233335b50a87cb067c2f70} 
+Memory\+::\+Memory\+Impl\+::\+Memory\+Impl (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes all memory addresses to zero. 
+
+
+
+Definition at line \mbox{\hyperlink{_memory_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{_memory_8hpp_source}{Memory.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ data.fill(0);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_memory_1_1_memory_impl_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_memory_1_1_memory_impl_a25e788e307f6f6d3dfff7b6e6a0dce47}\index{Memory::MemoryImpl@{Memory::MemoryImpl}!Read@{Read}}
+\index{Read@{Read}!Memory::MemoryImpl@{Memory::MemoryImpl}}
+\doxysubsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily \label{class_memory_1_1_memory_impl_a25e788e307f6f6d3dfff7b6e6a0dce47} 
+uint8\+\_\+t Memory\+::\+Memory\+Impl\+::\+Read (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{address}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reads an 8-\/bit value from the specified address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The 16-\/bit address from which to read the value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The 8-\/bit value read from the given address.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_memory_1_1_i_memory_a44fa3cb6cd94769fbbb07b1e523255a7}{Memory\+::\+IMemory}}.
+
+
+
+Definition at line \mbox{\hyperlink{_memory_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{_memory_8hpp_source}{Memory.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ data[address];}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_memory_1_1_memory_impl_af6f8e8782c9fa51acc727b014a1dac0f}\index{Memory::MemoryImpl@{Memory::MemoryImpl}!Write@{Write}}
+\index{Write@{Write}!Memory::MemoryImpl@{Memory::MemoryImpl}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily \label{class_memory_1_1_memory_impl_af6f8e8782c9fa51acc727b014a1dac0f} 
+void Memory\+::\+Memory\+Impl\+::\+Write (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{address}{, }\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Writes an 8-\/bit value to the specified 16-\/bit address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The 16-\/bit address to which the value will be written.\\
+\hline
+{\em value} & The 8-\/bit value to write.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_memory_1_1_i_memory_af602f9c5a180f89c033597a065d1d785}{Memory\+::\+IMemory}}.
+
+
+
+Definition at line \mbox{\hyperlink{_memory_8hpp_source_l00029}{29}} of file \mbox{\hyperlink{_memory_8hpp_source}{Memory.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ data[address]\ =\ value;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_memory_1_1_memory_impl_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_memory_1_1_memory_impl_a80cec429506734aacf319fa9fddcf73b}\index{Memory::MemoryImpl@{Memory::MemoryImpl}!MemorySize@{MemorySize}}
+\index{MemorySize@{MemorySize}!Memory::MemoryImpl@{Memory::MemoryImpl}}
+\doxysubsubsection{\texorpdfstring{MemorySize}{MemorySize}}
+{\footnotesize\ttfamily \label{class_memory_1_1_memory_impl_a80cec429506734aacf319fa9fddcf73b} 
+size\+\_\+t Memory\+::\+Memory\+Impl\+::\+Memory\+Size = 0x10000\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Total size of the addressable memory space. 
+
+
+
+Definition at line \mbox{\hyperlink{_memory_8hpp_source_l00014}{14}} of file \mbox{\hyperlink{_memory_8hpp_source}{Memory.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Leo\+Boy.\+Core/src/\+Memory/\mbox{\hyperlink{_memory_8hpp}{Memory.\+hpp}}\end{DoxyCompactItemize}
