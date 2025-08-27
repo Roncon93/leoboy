@@ -101,5 +101,11 @@
     <ClCompile Include="src\Cpu\Instructions\Implementations\Inc\Inc_A.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_a16_A.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utilities\BitOperations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

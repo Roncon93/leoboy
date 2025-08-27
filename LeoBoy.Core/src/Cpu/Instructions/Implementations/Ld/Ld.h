@@ -46,6 +46,15 @@ namespace Cpu
 				/// This instruction stores the value stored in a memory address into the combined HL registry.
 				/// </remarks>
 				void Ld_HL_d16(IInstructionRegistrator& registrator);
+
+				/// <summary>
+				/// Implementation of the "LD A, (a16)" instruction.
+				/// </summary>
+				/// <param name="registrator">The instruction registrator.</param>
+				/// <remarks>
+				/// This instruction loads the value from the memory address specified by the 16-bit immediate value into register A.
+				/// </remarks>
+				void Ld_a16_A(IInstructionRegistrator& registrator);
 			}
 		}
 	}

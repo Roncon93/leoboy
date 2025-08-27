@@ -46,3 +46,30 @@ TEST_CASE_METHOD(InstructionTests, "[CPU]: Execute \"LD HL, d16\" should update 
 	AssertOpcode(Cpu::Instructions::Opcodes::LD_HL_d16);
 	fakeit::Verify(Method(mockCpu, SetHL).Using(expectedAddress)).Once();
 }
+
+TEST_CASE_METHOD(InstructionTests, "[CPU]: Execute \"LD a16, A\" should write the value in register A to a specified address", "[unit], [cpu], [instructions]")
+{
+	// Arrange
+	uint16_t testPc = 0x2000;
+	uint8_t addressLowByte = 0x78;
+	uint8_t addressHighByte = 0x56;
+	uint16_t targetAddress = 0x5678;
+	uint8_t registerAValue = 0x9A;
+
+	fakeit::When(Method(mockCpu, IncrementPc))
+		.Return(testPc, testPc + 1);
+	fakeit::When(Method(mockMemory, Read).Using(testPc))
+		.Return(addressLowByte);
+	fakeit::When(Method(mockMemory, Read).Using(testPc + 1))
+		.Return(addressHighByte);
+	fakeit::When(Method(mockCpu, GetA))
+		.Return(registerAValue);
+	fakeit::Fake(Method(mockMemory, Write));
+
+	// Act
+	Cpu::Instructions::Implementations::Ld::Ld_a16_A(registrator);
+
+	// Assert
+	AssertOpcode(Cpu::Instructions::Opcodes::LD_a16_A);
+	fakeit::Verify(Method(mockMemory, Write).Using(targetAddress, registerAValue)).Once();
+}

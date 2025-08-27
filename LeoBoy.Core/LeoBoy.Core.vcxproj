@@ -158,6 +158,7 @@
     <ClCompile Include="src\Cpu\Cpu.hpp" />
     <ClCompile Include="src\Cpu\Instructions\IInstructionLookUp.h" />
     <ClCompile Include="src\Cpu\Instructions\Implementations\Inc\Inc_A.cpp" />
+    <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_a16_A.cpp" />
     <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_A_d8.cpp" />
     <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_A_HL.cpp" />
     <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_HL_A.cpp" />
@@ -169,6 +170,7 @@
     <ClCompile Include="src\Cpu\IWriteCpu.h" />
     <ClCompile Include="src\Logging\ConsoleLogger.hpp" />
     <ClCompile Include="src\Memory\Memory.hpp" />
+    <ClCompile Include="src\Utilities\BitOperations.cpp" />
     <ClCompile Include="src\Utilities\BitOperations.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -50,6 +50,12 @@ namespace Cpu
 			static constexpr uint8_t LD_HL_d16 = 0x21;
 
 			/// <summary>
+			/// Represents the opcode for the "LD (a16), A" instruction
+			/// which loads the value from register A into the memory address specified by the 16-bit immediate value.
+			/// </summary>
+			static constexpr uint8_t LD_a16_A = 0xEA;
+
+			/// <summary>
 			/// Represents the opcode for the "INC A" instruction
 			/// which increments the value in register A by 1 and updates the flags in register F accordingly.
 			/// </summary>
