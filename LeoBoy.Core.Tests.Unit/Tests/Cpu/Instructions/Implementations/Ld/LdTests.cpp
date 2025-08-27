@@ -9,7 +9,7 @@ TEST_CASE_METHOD(InstructionTests, "[CPU]: Execute \"LD A, d8\" should load the 
 	uint16_t testPc = 0x1234;
 	uint8_t immediateValue = 0x42;
 
-	fakeit::When(Method(mockCpu, GetPc))
+	fakeit::When(Method(mockCpu, IncrementPc))
 		.Return(testPc);
 	fakeit::When(Method(mockMemory, Read).Using(testPc))
 		.Return(immediateValue);

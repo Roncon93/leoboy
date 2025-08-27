@@ -54,6 +54,9 @@
     <ClCompile Include="Tests\Cpu\CpuPcTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Tests\Cpu\Instructions\Implementations\Inc\IncTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Libraries\catch_amalgamated.hpp">

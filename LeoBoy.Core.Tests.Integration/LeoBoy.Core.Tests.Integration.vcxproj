@@ -26,6 +26,7 @@
     <ClCompile Include="Tests\Cpu\CpuPcTests.cpp" />
     <ClCompile Include="Tests\Cpu\CpuSingleRegisterTests.cpp" />
     <ClCompile Include="Tests\Cpu\CpuTestsFixture.h" />
+    <ClCompile Include="Tests\Cpu\Instructions\Implementations\Inc\IncTests.cpp" />
     <ClCompile Include="Tests\Cpu\Instructions\Implementations\Ld\LdTests.cpp" />
     <ClCompile Include="Tests\Cpu\Instructions\Implementations\UnimplementedTests.cpp" />
   </ItemGroup>

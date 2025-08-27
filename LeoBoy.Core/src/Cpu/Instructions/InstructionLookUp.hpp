@@ -8,6 +8,7 @@
 #include "Implementations/Unimplemented.h"
 #include "Implementations/Nop/Nop.h"
 #include "Implementations/Ld/Ld.h"
+#include "Implementations/Inc/Inc.h"
 
 namespace Cpu
 {
@@ -43,6 +44,9 @@ namespace Cpu
 				Implementations::Ld::Ld_A_HL(*this);
 				Implementations::Ld::Ld_HL_A(*this);
 				Implementations::Ld::Ld_HL_d16(*this);
+
+				// INC
+				Implementations::Inc::Inc_A(*this);
 			}
 
 			void Register(uint8_t opcode, Instruction instruction) override

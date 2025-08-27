@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -23,6 +23,8 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Tests\Cpu\CpuOperationTests.cpp" />
     <ClCompile Include="Tests\Cpu\CpuPcTests.cpp" />
+    <ClCompile Include="Tests\Cpu\Instructions\Implementations\Inc\IncTests.cpp" />
+    <ClCompile Include="Tests\Cpu\Instructions\Implementations\Inc\IncTestsFixture.h" />
     <ClCompile Include="Tests\Cpu\Instructions\Implementations\Ld\LdTests.cpp" />
     <ClCompile Include="Tests\Cpu\Instructions\Implementations\UnimplementedTests.cpp" />
     <ClCompile Include="Tests\Cpu\Instructions\Implementations\Nop\NopTests.cpp" />

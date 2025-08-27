@@ -15,8 +15,7 @@ namespace Cpu
 					registrator.Register(Opcodes::LD_A_d8, [](Cpu::IWriteCpu& cpu, Memory::IMemory& memory, Logging::ILogger& logger)
 						{
 							// Read the immediate 8-bit value from the address pointed to by PC and increment PC
-							uint8_t value = memory.Read(cpu.GetPc());
-							cpu.IncrementPc();
+							uint8_t value = memory.Read(cpu.IncrementPc());
 
 							// Load the value into register A
 							cpu.SetA(value);

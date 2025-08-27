@@ -80,56 +80,91 @@ namespace Cpu
         /// <summary>
         /// Gets the combined 16-bit BC register.
         /// </summary>
+		/// <returns>The 16-bit BC register value.</returns>
         virtual const uint16_t GetBC() = 0;
 
         /// <summary>
         /// Gets the combined 16-bit DE register.
         /// </summary>
+		/// <returns>The 16-bit DE register value.</returns>
         virtual const uint16_t GetDE() = 0;
 
         /// <summary>
         /// Gets the combined 16-bit HL register.
         /// </summary>
+		/// <returns>The 16-bit HL register value.</returns>
         virtual const uint16_t GetHL() = 0;
 
         /// <summary>
         /// Gets the value of the accumulator register (A).
         /// </summary>
+		/// </ <returns>The value of the A register.</returns>
         virtual const uint8_t GetA() = 0;
 
         /// <summary>
         /// Gets the value of the flags register (F).
         /// </summary>
+		/// <returns>The value of the F register.</returns>
         virtual const uint8_t GetF() = 0;
 
         /// <summary>
         /// Gets the value of the B register.
         /// </summary>
+		/// </returns>The value of the B register.</returns>
         virtual const uint8_t GetB() = 0;
 
         /// <summary>
         /// Gets the value of the C register.
         /// </summary>
+		/// </returns>The value of the C register.</returns>
         virtual const uint8_t GetC() = 0;
 
         /// <summary>
         /// Gets the value of the D register.
         /// </summary>
+		/// </returns>The value of the D register.</returns>
         virtual const uint8_t GetD() = 0;
 
         /// <summary>
         /// Gets the value of the E register.
         /// </summary>
+		/// </returns>The value of the E register.</returns>
         virtual const uint8_t GetE() = 0;
 
         /// <summary>
         /// Gets the value of the H register.
         /// </summary>
+		/// </returns>The value of the H register.</returns>
         virtual const uint8_t GetH() = 0;
 
         /// <summary>
         /// Gets the value of the L register.
         /// </summary>
+		/// </returns>The value of the L register.</returns>
         virtual const uint8_t GetL() = 0;
+
+		/// <summary>
+		/// Gets the value of the zero flag (bit 7) of the F register.
+        /// </summary>
+		/// <returns>True if the zero flag is set; otherwise, false.</returns>
+		virtual const bool GetZeroFlag() = 0;
+
+		/// <summary>
+        /// Gets the value of the subtract flag (bit 6) of the F register.
+		/// </summary>
+		/// <returns>True if the subtract flag is set; otherwise, false.</returns>
+		virtual const bool GetSubtractFlag() = 0;
+
+        /// <summary>
+		/// Gets the value of the half-carry flag (bit 5) of the F register.
+		/// </summary>
+		/// <returns>True if the half-carry flag is set; otherwise, false.</returns>
+		virtual const bool GetHalfCarryFlag() = 0;
+
+		/// <summary>
+		/// Gets the value of the carry flag (bit 4) of the F register.
+		/// </summary>
+		/// <returns>True if the carry flag is set; otherwise, false.</returns>
+        virtual const bool GetCarryFlag() = 0;
     };
 }

@@ -92,5 +92,29 @@ namespace Cpu
 		/// </summary>
 		/// <param name="value">The 8-bit value to set.</param>
 		virtual void SetL(uint8_t value) = 0;
+
+		/// <summary>
+		/// Sets or clears the zero flag in the F register.
+		/// </summary>
+		/// <param name="isSet">True to set the flag, false to clear it.</param>
+		virtual void SetZeroFlag(bool isSet) = 0;
+
+		/// <summary>
+		/// Sets or clears the substract flag in the F register.
+		/// </summary>
+		/// <param name="isSet">True to set the flag, false to clear it.</param>
+		virtual void SetSubtractFlag(bool isSet) = 0;
+
+		/// <summary>
+		/// Sets or clears the half-carry flag in the F register.
+		/// </summary>
+		/// <param name="isSet">True to set the flag, false to clear it.</param>
+		virtual void SetHalfCarryFlag(bool isSet) = 0;
+
+		/// <summary>
+		/// Sets or clears the carry flag in the F register.
+		/// </summary>
+		/// <param name="isSet">True to set the flag, false to clear it.</param>
+		virtual void SetCarryFlag(bool isSet) = 0;
 	};
 }

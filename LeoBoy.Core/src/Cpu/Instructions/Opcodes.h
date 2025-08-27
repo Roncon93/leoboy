@@ -48,6 +48,12 @@ namespace Cpu
 			/// which stores the value in a memory address into the HL register pair.
 			/// </summary>
 			static constexpr uint8_t LD_HL_d16 = 0x21;
+
+			/// <summary>
+			/// Represents the opcode for the "INC A" instruction
+			/// which increments the value in register A by 1 and updates the flags in register F accordingly.
+			/// </summary>
+			static constexpr uint8_t Inc_A = 0x3C;
 		}
 	}
 }

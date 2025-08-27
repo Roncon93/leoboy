@@ -170,7 +170,53 @@ namespace Cpu
             l = value;
         }
 
+        void SetZeroFlag(bool isSet) override
+        {
+			SetFlag(FlagZero, isSet);
+        }
+
+        void SetSubtractFlag(bool isSet) override
+        {
+            SetFlag(FlagSubtract, isSet);
+        }
+
+        void SetHalfCarryFlag(bool isSet) override
+        {
+            SetFlag(FlagHalfCarry, isSet);
+		}
+
+        void SetCarryFlag(bool isSet) override
+        {
+            SetFlag(FlagCarry, isSet);
+		}
+
+        const bool GetZeroFlag() override
+        {
+            return (f & FlagZero) != 0;
+		}
+
+        const bool GetSubtractFlag() override
+        {
+            return (f & FlagSubtract) != 0;
+        }
+
+        const bool GetHalfCarryFlag() override
+        {
+            return (f & FlagHalfCarry) != 0;
+		}
+
+        const bool GetCarryFlag() override
+        {
+            return (f & FlagCarry) != 0;
+        }
+
     private:
+        // Flags
+		static constexpr uint8_t FlagZero = 0x80; // Bit 7
+		static constexpr uint8_t FlagSubtract = 0x40; // Bit 6
+		static constexpr uint8_t FlagHalfCarry = 0x20; // Bit 5
+		static constexpr uint8_t FlagCarry = 0x10; // Bit 4
+
 		// References to memory and logger
         Memory::IMemory& memory;
         Logging::ILogger& logger;
@@ -223,5 +269,22 @@ namespace Cpu
             high = static_cast<uint8_t>((value >> 8) & 0xFF);
             low = static_cast<uint8_t>(value & 0xFF);
         }
+
+		/// <summary>
+		/// Sets or clears a specific flag in the F register based on the provided mask.
+		/// </summary>
+		/// <param name="flagMask">The bitmask representing the flag to set or clear.</param>
+		/// <param name="isSet">True to set the flag, false to clear it.</param>
+        void SetFlag(uint8_t flagMask, bool isSet)
+        {
+            if (isSet)
+            {
+                f |= flagMask;
+            }
+            else
+            {
+                f &= ~flagMask;
+            }
+		}
     };
 }

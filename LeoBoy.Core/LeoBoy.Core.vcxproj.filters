@@ -45,6 +45,9 @@
     <ClInclude Include="src\Cpu\Instructions\Implementations\Unimplemented.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Cpu\Instructions\Implementations\Inc\Inc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LeoBoy.Core.cpp">
@@ -93,6 +96,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Utilities\BitOperations.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Cpu\Instructions\Implementations\Inc\Inc_A.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
