@@ -11,7 +11,7 @@ namespace Cpu
 			{
 				void Nop(IInstructionRegistrator& registrator)
 				{
-					registrator.Register(Opcodes::NOP, [](Cpu::IWriteCpu& cpu, Memory::IMemory& memory, Logging::ILogger& logger)
+					registrator.Register(Opcodes::NOP, [](SystemReferences& systems)
 						{
 							// NOP does nothing
 						});

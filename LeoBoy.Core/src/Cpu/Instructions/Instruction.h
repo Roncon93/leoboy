@@ -9,7 +9,24 @@ namespace Cpu
 {
     namespace Instructions
     {
+        class SystemReferences
+        {
+        public:
+            SystemReferences(Cpu::IWriteCpu& cpu, Memory::IMemory& memory, Logging::ILogger& logger);
+
+            Cpu::IWriteCpu& GetCpu();
+
+            Memory::IMemory& GetMemory();
+
+            Logging::ILogger& GetLogger();
+
+        private:
+			Cpu::IWriteCpu& cpu;
+			Memory::IMemory& memory;
+			Logging::ILogger& logger;
+        };
+
         // Define Instruction as a std::function type matching the lambda signature
-        using Instruction = std::function<void(Cpu::IWriteCpu&, Memory::IMemory&, Logging::ILogger&)>;
+        using InstructionHandler = std::function<void(SystemReferences&)>;
     }
 }

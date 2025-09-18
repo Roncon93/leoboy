@@ -21,7 +21,7 @@ namespace Cpu
 			/// Retrieves the registered instruction implementation for the specified opcode.
 			/// </summary>
 			/// <param name="opcode">The opcode of the instruction to look up.</param>
-			virtual Instruction Get(uint8_t opcode) = 0;
+			virtual InstructionHandler Get(uint8_t opcode) = 0;
 		};
 	}
 }

@@ -11,8 +11,11 @@ namespace Cpu
 			{
 				void Inc_A(IInstructionRegistrator& registrator)
 				{
-					registrator.Register(Opcodes::Inc_A, [](Cpu::IWriteCpu& cpu, Memory::IMemory& memory, Logging::ILogger& logger)
+					registrator.Register(Opcodes::Inc_A, [](SystemReferences& systems)
 						{
+							Cpu::IWriteCpu& cpu = systems.GetCpu();
+							Memory::IMemory& memory = systems.GetMemory();
+
 							// Increment the value in register A
 							uint8_t originalValue = cpu.GetA();
 							uint8_t result = originalValue + 1;

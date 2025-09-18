@@ -32,7 +32,7 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Step should fetch, decode and execute an inst
 		.Return(testOpcode);
 
 	fakeit::When(Method(mockInstructionLookUp, Get).Using(testOpcode))
-		.Return([&instructionExecuted](Cpu::IWriteCpu& cpu, Memory::IMemory& memory, Logging::ILogger& logger)
+		.Return([&instructionExecuted](Cpu::Instructions::SystemReferences& systems)
 			{
 				instructionExecuted = true;
 			});

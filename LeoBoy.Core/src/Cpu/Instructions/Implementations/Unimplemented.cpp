@@ -12,13 +12,13 @@ namespace Cpu
 		{
 			void Unimplemented(IInstructionRegistrator& registrator, uint8_t opcode)
 			{
-				registrator.Register(opcode, [opcode](Cpu::IWriteCpu& cpu, Memory::IMemory& memory, Logging::ILogger& logger)
+				registrator.Register(opcode, [opcode](SystemReferences& systems)
 					{
 						// Log unimplemented opcode usage
 						std::stringstream stream;
 						stream << "Unimplemented opcode: 0x" << std::hex << (int)opcode << "\n";
 							
-						logger.Log(1, stream.str());
+						systems.GetLogger().Log(1, stream.str());
 					});
 			}
 		}

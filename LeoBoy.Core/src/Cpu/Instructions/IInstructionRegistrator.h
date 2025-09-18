@@ -23,7 +23,7 @@ namespace Cpu
 			/// </summary>
 			/// <param name="opcode">The opcode of the instruction to register.</param>
 			/// <param name="instruction">The instruction implementation to associate with the opcode.</param>
-			virtual void Register(uint8_t opcode, Instruction instruction) = 0;
+			virtual void Register(uint8_t opcode, InstructionHandler instruction) = 0;
 		};
 	}
 }

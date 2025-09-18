@@ -49,12 +49,12 @@ namespace Cpu
 				Implementations::Inc::Inc_A(*this);
 			}
 
-			void Register(uint8_t opcode, Instruction instruction) override
+			void Register(uint8_t opcode, InstructionHandler instruction) override
 			{
 				instructions[opcode] = instruction;
 			}
 
-			Instruction Get(uint8_t opcode) override
+			InstructionHandler Get(uint8_t opcode) override
 			{
 				return instructions[opcode];
 			}
@@ -63,7 +63,7 @@ namespace Cpu
 			/// <summary>
 			/// Array mapping opcodes (0x00 to 0xFF) to their corresponding instruction implementations.
 			/// </summary>
-			std::array<Instruction, 256> instructions;
+			std::array<InstructionHandler, 256> instructions;
 		};
 	}
 }

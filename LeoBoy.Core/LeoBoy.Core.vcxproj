@@ -159,12 +159,14 @@
     <ClCompile Include="src\Cpu\Instructions\IInstructionLookUp.h" />
     <ClCompile Include="src\Cpu\Instructions\Implementations\Inc\Inc_A.cpp" />
     <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_a16_A.cpp" />
+    <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_A_a16.cpp" />
     <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_A_d8.cpp" />
     <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_A_HL.cpp" />
     <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_HL_A.cpp" />
     <ClCompile Include="src\Cpu\Instructions\Implementations\Ld\Ld_HL_d16.cpp" />
     <ClCompile Include="src\Cpu\Instructions\Implementations\Nop\Nop.cpp" />
     <ClCompile Include="src\Cpu\Instructions\Implementations\Unimplemented.cpp" />
+    <ClCompile Include="src\Cpu\Instructions\Instruction.cpp" />
     <ClCompile Include="src\Cpu\Instructions\Instruction.h" />
     <ClCompile Include="src\Cpu\Instructions\InstructionLookUp.hpp" />
     <ClCompile Include="src\Cpu\IWriteCpu.h" />

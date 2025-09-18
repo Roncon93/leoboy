@@ -17,8 +17,12 @@ namespace Cpu
         /// <summary>
         /// Initializes all registers to zero.
         /// </summary>
-        CpuImpl(Memory::IMemory& memory, Logging::ILogger& logger, Instructions::IInstructionLookUp& instructions)
-            : memory(memory), logger(logger), instructions(instructions), pc(InitialPc), sp(InitialSp),
+        /// <summary>
+        /// Initializes all registers to zero.
+        /// </summary>
+        CpuImpl(Memory::IMemory& memory, Logging::ILogger& logger, Instructions::IInstructionLookUp& instruction)
+            : memory(memory), logger(logger), instructions(instruction), system(*this, memory, logger),
+            pc(InitialPc), sp(InitialSp),
             a(0), f(0), b(0), c(0), d(0), e(0), h(0), l(0)
         {
         }
@@ -30,8 +34,8 @@ namespace Cpu
 
         void Execute(uint8_t opcode)
         {
-			Instructions::Instruction instruction = instructions.Get(opcode);
-			instruction(*this, memory, logger);
+			Instructions::InstructionHandler instruction = instructions.Get(opcode);
+			instruction(system);
         }
 
         void Step() override
@@ -217,9 +221,10 @@ namespace Cpu
 		static constexpr uint8_t FlagHalfCarry = 0x20; // Bit 5
 		static constexpr uint8_t FlagCarry = 0x10; // Bit 4
 
-		// References to memory and logger
+		// References to other systems
         Memory::IMemory& memory;
         Logging::ILogger& logger;
+		Instructions::SystemReferences system;
 
 		// Program Counter and Stack Pointer
         uint16_t pc;

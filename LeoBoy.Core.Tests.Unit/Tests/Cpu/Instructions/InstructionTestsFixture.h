@@ -12,23 +12,21 @@ public:
 	class TestInstructionRegistrator : public Cpu::Instructions::IInstructionRegistrator
 	{
 	public:
-		Cpu::IWriteCpu& cpu;
-		Memory::IMemory& memory;
-		Logging::ILogger& logger;
 		uint8_t registeredOpcode;
+		Cpu::Instructions::SystemReferences systems;
 
         // Replace the initialization of assertOpcode in TestInstructionRegistrator's constructor with the correct lambda assignment
-        TestInstructionRegistrator(Cpu::IWriteCpu& cpu, Memory::IMemory& memory, Logging::ILogger& logger)
-									: cpu(cpu), memory(memory), logger(logger), registeredOpcode(0)
+        TestInstructionRegistrator(Cpu::Instructions::SystemReferences systems)
+									: systems(systems), registeredOpcode(0)
         {
         }
 
-		void Register(uint8_t opcode, Cpu::Instructions::Instruction instruction) override
+		void Register(uint8_t opcode, Cpu::Instructions::InstructionHandler instruction) override
 		{
 			registeredOpcode = opcode;
 
 			// For testing, we can directly invoke the instruction to verify its behavior
-			instruction(cpu, memory, logger);
+			instruction(systems);
 		}
 	};
 protected:
@@ -38,7 +36,7 @@ protected:
 
 	TestInstructionRegistrator registrator;
 
-	InstructionTests() : registrator(mockCpu.get(), mockMemory.get(), mockLogger.get())
+	InstructionTests() : registrator(Cpu::Instructions::SystemReferences(mockCpu.get(), mockMemory.get(), mockLogger.get()))
 	{
 		fakeit::Fake(Method(mockCpu, IncrementPc));
 		fakeit::Fake(Method(mockLogger, Log));

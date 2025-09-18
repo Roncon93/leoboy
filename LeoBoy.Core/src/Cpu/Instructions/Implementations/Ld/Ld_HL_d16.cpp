@@ -12,8 +12,11 @@ namespace Cpu
 			{
 				void Ld_HL_d16(IInstructionRegistrator& registrator)
 				{
-					registrator.Register(Opcodes::LD_HL_d16, [](Cpu::IWriteCpu& cpu, Memory::IMemory& memory, Logging::ILogger& logger)
+					registrator.Register(Opcodes::LD_HL_d16, [](SystemReferences& systems)
 						{
+							Cpu::IWriteCpu& cpu = systems.GetCpu();
+							Memory::IMemory& memory = systems.GetMemory();
+
 							// Read the next 2 immediate 8-bit values from the address pointed to by PC
 							uint8_t addressLowByte = memory.Read(cpu.IncrementPc());
 							uint8_t addressHighByte = memory.Read(cpu.IncrementPc());
