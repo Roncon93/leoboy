@@ -41,6 +41,7 @@ namespace Cpu
 
 				// LD
 				Implementations::Ld::Ld_A_d8(*this);
+				Implementations::Ld::Ld_A_a16(*this);
 				Implementations::Ld::Ld_A_HL(*this);
 				Implementations::Ld::Ld_HL_A(*this);
 				Implementations::Ld::Ld_HL_d16(*this);

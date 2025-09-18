@@ -21,6 +21,16 @@ namespace Cpu
 				void Ld_A_d8(IInstructionRegistrator& registrator);
 
 				/// <summary>
+				/// Implementation of the "LD A, a16" instruction.
+				/// </summary>
+				/// <param name="registrator">The instruction registrator.</param>
+				/// <remarks>
+				/// This instruction loads the immediate 16-bit address value from memory into the accumulator register A.
+				/// It is represented by the opcode 0xFA.
+				/// </remarks>
+				void Ld_A_a16(IInstructionRegistrator& registrator);
+
+				/// <summary>
 				/// Implementation of the "LD A, (HL)" instruction.
 				/// </summary>
 				/// <param name="registrator">The instruction registrator.</param>

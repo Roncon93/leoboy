@@ -32,6 +32,12 @@ namespace Cpu
 			static constexpr uint8_t LD_A_d8 = 0x3E;
 
 			/// <summary>
+			/// Represents the opcode for the "LD A, a16" instruction
+			/// which loads the value stored in the immediate 16-bit address from memory into the accumulator register A.
+			/// </summary>
+			static constexpr uint8_t LD_A_a16 = 0xFA;
+
+			/// <summary>
 			/// Represents the opcode for the "LD A, (HL)" instruction
 			/// which loads the value from the memory address pointed to by the HL register pair into register A.
 			/// </summary>

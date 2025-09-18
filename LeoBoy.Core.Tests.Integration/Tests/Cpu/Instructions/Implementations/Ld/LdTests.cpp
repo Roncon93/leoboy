@@ -18,6 +18,28 @@ TEST_CASE_METHOD(CpuTests, "[CPU]: Execute \"LD A, d8\" should load the byte in 
 	REQUIRE(cpu.GetA() == testValue);
 }
 
+TEST_CASE_METHOD(CpuTests, "[CPU]: Execute \"LD A, a16\" should load value stored in the immediate address into register A", "[integration], [cpu], [instructions]")
+{
+	// Arrange
+	uint8_t testOpcode = Cpu::Instructions::Opcodes::LD_A_a16;
+	uint16_t testAddress = 0x1234;
+	uint8_t firstImmediateValue = 0x34;
+	uint8_t secondImmediateValue = 0x12;
+	uint8_t testValue = 0x56;
+	uint16_t testPc = cpu.GetPc();
+
+	memory.Write(testPc, testOpcode);
+	memory.Write(testPc + 1, firstImmediateValue);
+	memory.Write(testPc + 2, secondImmediateValue);
+	memory.Write(testAddress, testValue);
+
+	// Act
+	cpu.Step();
+
+	// Assert
+	REQUIRE(cpu.GetA() == testValue);
+}
+
 TEST_CASE_METHOD(CpuTests, "[CPU]: Execute \"LD A, HL\" should load the byte in the address stored by HL into register A", "[integration], [cpu], [instructions]")
 {
 	// Arrange

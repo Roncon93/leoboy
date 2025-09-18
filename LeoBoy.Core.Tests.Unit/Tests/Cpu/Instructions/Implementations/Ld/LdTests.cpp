@@ -23,6 +23,33 @@ TEST_CASE_METHOD(InstructionTests, "[CPU]: Execute \"LD A, d8\" should load the 
 	fakeit::Verify(Method(mockCpu, SetA).Using(immediateValue)).Once();
 }
 
+TEST_CASE_METHOD(InstructionTests, "[CPU]: Execute \"LD A, a16\" should load value stored in the immediate address into register A", "[unit], [cpu], [instructions]")
+{
+	// Arrange
+	uint16_t testPc = 0x1234;
+	uint16_t testAddress = 0x5678;
+	uint8_t firstImmediateValue = 0x78;
+	uint8_t secondImmediateValue = 0x56;
+	uint8_t expectedValue = 0x9A;
+
+	fakeit::When(Method(mockCpu, IncrementPc))
+		.Return(testPc, testPc + 1);
+	fakeit::When(Method(mockMemory, Read).Using(testPc))
+		.Return(firstImmediateValue);
+	fakeit::When(Method(mockMemory, Read).Using(testPc + 1))
+		.Return(secondImmediateValue);
+	fakeit::When(Method(mockMemory, Read).Using(testAddress))
+		.Return(expectedValue);
+	fakeit::Fake(Method(mockCpu, SetA));
+
+	// Act
+	Cpu::Instructions::Implementations::Ld::Ld_A_a16(registrator);
+
+	// Assert
+	AssertOpcode(Cpu::Instructions::Opcodes::LD_A_a16);
+	fakeit::Verify(Method(mockCpu, SetA).Using(expectedValue)).Once();
+}
+
 TEST_CASE_METHOD(InstructionTests, "[CPU]: Execute \"LD HL, d16\" should update HL with a new memory address", "[unit], [cpu], [instructions]")
 {
 	// Arrange
